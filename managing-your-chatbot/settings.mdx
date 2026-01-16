@@ -1,0 +1,216 @@
+---
+title: "Chatbot Settings"
+sidebarTitle: "Settings"
+description: "Configure your chatbot's behavior, AI model, notifications, and advanced options."
+icon: "settings"
+---
+
+import Cta from '/snippets/cta.mdx';
+
+The Settings section lets you configure how your chatbot behaves, which AI model it uses, rate limiting, domain restrictions, and more.
+
+## Accessing Settings
+
+<Steps>
+  <Step title="Go to Configuration">
+    In your chatbot dashboard, click **Configuration** in the sidebar.
+  </Step>
+  <Step title="Select Settings">
+    Click on the **Settings** tab.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/managing-your-chatbot/settings-basic.png" alt="Basic settings tab" />
+</Frame>
+
+## Basic Settings
+
+The Basic tab contains core configuration options for your chatbot.
+
+### Agent ID
+
+Your unique chatbot identifier. You'll need this ID to connect to your agent using Zapier and other integrations.
+
+### Default Answer
+
+The fallback response when your agent cannot find a relevant answer in its training data. You can customize this message or reset it to the default.
+
+### Default Language
+
+Select the language your agent uses when replying. Set to **Auto** to automatically detect and respond in the visitor's language.
+
+### Insights Email Frequency
+
+Choose how often you receive email summaries with your chatbot's top answered and unanswered questions. Options include:
+- Daily
+- Weekly
+- Monthly
+- Never
+
+### Enable Media In Messages
+
+When enabled, your agent can display images and videos directly in messages. When disabled, the agent will provide a link to the media instead.
+
+### Enable Feedback
+
+Allow visitors to provide feedback on responses by selecting thumbs up or thumbs down after each message. This helps you identify which responses need improvement.
+
+### Page Context Awareness
+
+Allow the agent to understand the current page content when responding to questions. The agent will analyze the page where the chat is embedded to provide more relevant answers.
+
+### Enable File Uploads
+
+Allow visitors to upload files to the agent with their messages. Your agent can process these files and use them to answer questions.
+
+---
+
+## AI Model Settings
+
+Configure the AI model powering your chatbot and customize its behavior.
+
+<Frame>
+  <img src="/images/managing-your-chatbot/settings-ai-model.png" alt="AI Model settings tab" />
+</Frame>
+
+### Model
+
+Select which AI model your agent uses to generate answers and perform actions. Available models include various OpenAI GPT versions and other providers.
+
+<Note>
+  Be careful when changing these settings as it may affect the performance of your agent. Test your agent after making changes.
+</Note>
+
+### Instructions
+
+Customize the behavior, tone, and personality of your agent. The default instructions define:
+- The agent's role and demeanor
+- How it should handle questions outside its training data
+- Whether it can use general knowledge or only trained content
+- How to handle attempts to change the conversation topic
+
+You can add custom instructions to:
+- Define a specific persona or brand voice
+- Include additional context about your business
+- Set rules for handling specific types of questions
+
+### Model Temperature
+
+Control the randomness of responses on a scale from 0 to 1:
+- **0**: Most predictable and consistent responses
+- **1**: More creative and varied responses
+
+For support chatbots, lower values (0-0.3) are typically recommended for accuracy.
+
+---
+
+## Notice Settings
+
+Display a notice message that users must accept before starting a chat. This is useful for terms and conditions, privacy notices, or other important information.
+
+<Frame>
+  <img src="/images/managing-your-chatbot/settings-notice.png" alt="Notice settings tab" />
+</Frame>
+
+### Enable Notice
+
+Toggle this on to display a notice message before users can start chatting.
+
+### Notice Message
+
+Enter your notice message (up to 250 characters). This message supports basic markdown formatting for links and emphasis.
+
+---
+
+## Other Settings Tabs
+
+The Settings section includes several other tabs with dedicated documentation:
+
+<CardGroup cols={2}>
+  <Card title="Leads" icon="user-plus" href="/managing-your-chatbot/lead-capture">
+    Configure lead capture forms and fields.
+  </Card>
+  <Card title="Escalations" icon="headphones" href="/managing-your-chatbot/human-handoff">
+    Set up human handoff and support notifications.
+  </Card>
+  <Card title="Localization" icon="globe" href="/managing-your-chatbot/languages">
+    Multi-language support and message localization.
+  </Card>
+  <Card title="Integrations" icon="plug" href="#">
+    Connect to third-party services and platforms.
+  </Card>
+</CardGroup>
+
+---
+
+## Advanced Settings
+
+The Advanced tab contains voice features, restriction levels, rate limiting, and domain restrictions.
+
+<Frame>
+  <img src="/images/managing-your-chatbot/settings-advanced.png" alt="Advanced settings tab" />
+</Frame>
+
+### Voice Recognition & Text-to-Speech
+
+Enable voice input and audio responses for your chatbot. For detailed configuration, see [Voice & TTS](/managing-your-chatbot/voice-and-tts).
+
+### Restriction Level
+
+Control how strictly your agent adheres to its training data:
+
+| Level | Behavior |
+|-------|----------|
+| **Max** (Default) | Agent will only answer based on the training data |
+| **Low** | Agent will attempt to use training data, but can also use some general ChatGPT knowledge |
+| **None** | No restrictions, agent will answer any query |
+
+### Rate Limiting
+
+Prevent abuse by limiting the number of messages a visitor can send within a 5-minute window.
+
+- **Enable Rate Limiting**: Toggle to activate message limits
+- **Maximum Messages (per 5 minutes)**: Set the message cap (default: 20)
+- **Rate Limit Message**: Customize the message shown when visitors exceed the limit
+
+### Domain Restrictions
+
+Control where your chatbot can be loaded:
+
+- **Allowed Domains**: Add specific domains where your chatbot is permitted to load. Leave empty to allow all domains.
+- **Custom Domain**: Serve your agent from your own custom domain (available on Business and Enterprise plans).
+
+---
+
+## Danger Zone
+
+<Warning>
+  Actions in this section are irreversible and cannot be undone.
+</Warning>
+
+<Frame>
+  <img src="/images/managing-your-chatbot/settings-danger-zone.png" alt="Danger zone with delete option" />
+</Frame>
+
+### Delete Agent
+
+Permanently delete your chatbot and all its data. This removes:
+- All training data and sources
+- Conversation history
+- Captured leads
+- All configuration and settings
+
+<Steps>
+  <Step title="Navigate to Advanced tab">
+    Go to **Configuration → Settings → Advanced**.
+  </Step>
+  <Step title="Scroll to Danger Zone">
+    Find the **Danger Zone** section at the bottom.
+  </Step>
+  <Step title="Click Delete Agent">
+    Click the red **Delete Agent** button and confirm.
+  </Step>
+</Steps>
+
+<Cta />

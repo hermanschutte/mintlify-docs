@@ -1,0 +1,100 @@
+---
+title: "Human handoff"
+sidebarTitle: "Human handoff"
+description: "Allow visitors to escalate conversations to human support when needed"
+icon: "headphones"
+---
+
+import Cta from '/snippets/cta.mdx';
+
+Sometimes your visitors need to speak with a human. SiteSpeakAI makes it easy to escalate conversations to your support team when the AI can't fully help.
+
+## How human handoff works
+
+When enabled, visitors can request to speak with a human agent. They'll be prompted to enter their email address, and your team receives a notification with the conversation details.
+
+## Enable escalations
+
+<Steps>
+  <Step title="Go to Configuration">
+    In your chatbot dashboard, click **Configuration** in the sidebar.
+  </Step>
+  <Step title="Select Settings">
+    Click on **Settings**.
+  </Step>
+  <Step title="Go to Escalations tab">
+    Click on the **Escalations** tab.
+  </Step>
+  <Step title="Enable Escalations">
+    Toggle on **Enable Escalations** to allow visitors to escalate to human support.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/managing-your-chatbot/human-handoff-settings.png" alt="Escalation settings" />
+</Frame>
+
+## Email notifications
+
+Get notified via email when a visitor escalates:
+
+1. Toggle on **Enable Email Notifications**
+2. Enter your email address(es) in the **Escalation Notification Email(s)** field
+3. Separate multiple emails with semicolons (`;`)
+
+### Round robin notifications
+
+If you have multiple team members handling support, enable **Round Robin Notifications** to rotate escalations between email addresses instead of sending to all. Each escalation goes to the next email in the list.
+
+<Tip>
+  Round robin is great for distributing workload evenly across your support team without overwhelming everyone with notifications.
+</Tip>
+
+## Slack notifications
+
+Receive escalation notifications directly in your Slack workspace:
+
+<Steps>
+  <Step title="Connect Slack">
+    Go to **Install Agent → Slack** and click **Connect to Slack**.
+  </Step>
+  <Step title="Install the app">
+    Authorize SiteSpeakAI to access your Slack workspace.
+  </Step>
+  <Step title="Invite to a channel">
+    Invite the SiteSpeakAI bot to the channel where you want to receive notifications.
+  </Step>
+  <Step title="Enable Slack notifications">
+    Back in **Settings → Escalations**, toggle on **Enable Slack Notifications**.
+  </Step>
+</Steps>
+
+<Note>
+  You must connect Slack in Deploy & Install before the Slack notification option becomes available.
+</Note>
+
+## How visitors escalate
+
+Once enabled, visitors can escalate to human support by:
+
+- **Asking to speak with a human**: The AI recognizes requests like "Can I talk to a person?" or "I need human help"
+- **The AI offering escalation**: When the AI can't confidently answer, it can offer to connect the visitor with a human
+
+When a visitor escalates, they'll be prompted to enter their email address so your team can follow up.
+
+## Customizing escalation messages
+
+You can customize the messages shown to visitors during escalation in the **Localization** tab under Settings, including:
+
+- The message shown when escalating
+- Email input placeholder text
+- Confirmation messages
+
+## Best practices
+
+- **Set expectations**: Let visitors know typical response times in your escalation confirmation message
+- **Use round robin**: Distribute escalations evenly across your team
+- **Connect Slack**: Get real-time notifications where your team already communicates
+- **Review escalations**: Regularly review why visitors escalate to improve your AI's training
+
+<Cta />

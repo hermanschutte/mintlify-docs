@@ -1,0 +1,143 @@
+---
+title: "Deploy & install your chatbot"
+sidebarTitle: "Deploy & Install"
+description: "Add your AI chatbot to any website with a simple code snippet"
+icon: "rocket"
+---
+
+import Cta from '/snippets/cta.mdx';
+
+Installing SiteSpeakAI on your website is easy and involves pasting a single code snippet into your website's HTML.
+
+## Get your code snippet
+
+<Steps>
+  <Step title="Log in to your account">
+    Go to [sitespeak.ai](https://sitespeak.ai) and log in to your dashboard.
+  </Step>
+  <Step title="Select your chatbot">
+    Choose your chatbot from the dropdown at the top of the sidebar.
+  </Step>
+  <Step title="Go to Install Agent">
+    Click on **Install Agent** in the sidebar.
+  </Step>
+  <Step title="Copy the JavaScript code">
+    Make sure the **JavaScript** tab is selected, then click **Copy Code**.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/managing-your-chatbot/deploy-javascript.png" alt="JavaScript installation code" />
+</Frame>
+
+## Add to your website
+
+Paste the code snippet into the `<head>` section of your website:
+
+```html
+<head>
+  <!-- Your other head tags -->
+  
+  <script type="text/javascript">(function()
+  {d=document;s=d.createElement("script");s.src="https://sitespeak.ai/chatbots/YOUR_CHATBOT_ID.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+</head>
+```
+
+<Note>
+  Replace `YOUR_CHATBOT_ID` with your actual chatbot ID from the dashboard.
+</Note>
+
+Once added, your chatbot will appear on your website automatically.
+
+## Alternative: iFrame embed
+
+If you prefer to embed the chatbot as an iFrame (useful for embedding in specific page sections), switch to the **iFrame** tab in the Install Agent section.
+
+<Frame>
+  <img src="/images/managing-your-chatbot/deploy-iframe.png" alt="iFrame installation code" />
+</Frame>
+
+Paste the iFrame code into the `<body>` section where you want the chatbot to appear:
+
+```html
+<iframe 
+  class="sitespeak-ai-chatbot" 
+  src="https://sitespeak.ai/embed/YOUR_CHATBOT_ID?nc=1&nf=1" 
+  allow="microphone;" 
+  frameborder="0" 
+  style="border:none; overflow:hidden; border-radius:5px; width:450px; height:600px; border: 1px solid #e2e8f1;">
+</iframe>
+```
+
+## Identity verification
+
+For a more personalized experience, you can securely identify logged-in users and link conversations to their accounts.
+
+### Enable identity verification
+
+1. In the **Install Agent** section, find **Identity Verification**
+2. Toggle on **Enable Identity Verification**
+3. Click **Generate** to create your secret key
+4. Store the secret key securely on your server
+
+<Warning>
+  Never expose your secret key in client-side code. It should only be used on your server.
+</Warning>
+
+### How it works
+
+1. **Server-side**: Generate a JWT token with user information
+2. **Client-side**: Pass the token to the chatbot
+
+```javascript
+// Server-side: Generate JWT token
+const jwt = require('jsonwebtoken');
+const token = jwt.sign({
+  user_id: user.id,
+  email: user.email,
+  name: user.name,
+  exp: Math.floor(Date.now() / 1000) + 3600
+}, 'YOUR_SECRET_KEY', { algorithm: 'HS256' });
+
+// Client-side: Pass token to chatbot
+window.SiteSpeakAI.identify({
+  token: token
+});
+```
+
+<Tip>
+  Identity verification allows you to personalize welcome messages using [template tags](/managing-your-chatbot/personalise-welcome-message) and view conversation history per user.
+</Tip>
+
+## Platform-specific guides
+
+Looking to install on a specific platform? Check out our detailed guides:
+
+<CardGroup cols={2}>
+  <Card title="WordPress" icon="wordpress" href="/installing-your-chatbot/wordpress">
+    Install on WordPress sites
+  </Card>
+  <Card title="Shopify" icon="shopify" href="/installing-your-chatbot/shopify">
+    Add to your Shopify store
+  </Card>
+  <Card title="Webflow" icon="globe" href="/installing-your-chatbot/webflow">
+    Install on Webflow sites
+  </Card>
+  <Card title="Slack" icon="slack" href="/installing-your-chatbot/slack">
+    Connect to Slack workspace
+  </Card>
+</CardGroup>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Customize appearance" icon="paintbrush" href="/managing-your-chatbot/appearance">
+    Match your chatbot to your brand
+  </Card>
+  <Card title="Capture leads" icon="user-plus" href="/managing-your-chatbot/lead-capture">
+    Turn visitors into qualified leads
+  </Card>
+</CardGroup>
+
+<Cta />
+

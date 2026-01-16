@@ -1,0 +1,158 @@
+---
+title: "Languages & Localization"
+sidebarTitle: "Languages"
+description: "Configure your chatbot to support multiple languages and customize all interface text for each language."
+icon: "globe"
+---
+
+import Cta from '/snippets/cta.mdx';
+
+SiteSpeakAI supports full multi-language localization, allowing you to customize all labels, messages, and text displayed in your chatbot for each language your visitors use.
+
+## Accessing Localization Settings
+
+<Steps>
+  <Step title="Go to Configuration">
+    In your chatbot dashboard, click **Configuration** in the sidebar.
+  </Step>
+  <Step title="Select Settings">
+    Click on the **Settings** tab.
+  </Step>
+  <Step title="Go to Localization tab">
+    Navigate to the **Localization** tab.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/managing-your-chatbot/localization-settings.png" alt="Localization settings" />
+</Frame>
+
+---
+
+## Enabled Languages
+
+Add multiple languages to support visitors from different regions. Your chatbot will display all labels and messages in the visitor's preferred language.
+
+### Language Detection
+
+Choose how your chatbot determines which language to display:
+
+- **Auto-detect language**: Automatically detects the visitor's language from their browser or page settings
+- **Specific language**: Force the chatbot to always display in a particular language
+
+### Adding a New Language
+
+<Steps>
+  <Step title="Click Add Language">
+    In the **Enabled Languages** section, click the **+ Add Language** button.
+  </Step>
+  <Step title="Enter language details">
+    Specify the language code (e.g., `fr` for French, `de` for German) and language name.
+  </Step>
+  <Step title="Click Add">
+    Click the **Add** button to add the new language.
+  </Step>
+</Steps>
+
+### Setting a Default Language
+
+One language is marked as **Default**. This is used when:
+- The visitor's language cannot be detected
+- The visitor's language hasn't been configured in your chatbot
+
+---
+
+## Translations
+
+Customize all text displayed in your chatbot for each language. This ensures a fully localized experience for your visitors.
+
+### Customizable Fields
+
+The Translations section lets you customize:
+
+**General**
+- Agent Name
+- Placeholder Message (input field text)
+- Welcome Messages
+- Footer Text
+
+**Lead Capture**
+- Form title and description
+- Field labels (Name, Email, Phone, etc.)
+- Submit button text
+
+**Escalation**
+- Escalation request messages
+- Confirmation messages
+- Unavailable messages
+
+**Feedback**
+- Feedback prompts
+- Thank you messages
+
+**Errors & System**
+- Error messages
+- Rate limit messages
+- Loading states
+
+### Editing Translations
+
+<Steps>
+  <Step title="Select a language">
+    In the **Translations** section, click on the language tab you want to edit (e.g., **English**, **French**).
+  </Step>
+  <Step title="Update the text fields">
+    Modify any of the text fields. Each field has a **Reset** button to restore the default text.
+  </Step>
+  <Step title="Save your changes">
+    Click the **Save** button to store your translations.
+  </Step>
+</Steps>
+
+<Tip>
+  You can add as many languages as you need. Each language gets its own complete set of customizable text fields.
+</Tip>
+
+---
+
+## How It Works
+
+Once you've configured multiple languages:
+
+1. **Visitor arrives**: When a visitor opens your chatbot, their browser language is detected
+2. **Language matched**: If you've configured that language, all interface text displays in their language
+3. **AI responds**: The AI also responds in the detected language, using your training content
+4. **Fallback**: If the language isn't configured, the default language is used
+
+---
+
+## AI Language Support
+
+Beyond interface localization, your chatbot's AI can understand and respond in virtually any language:
+
+- The AI automatically detects the language of incoming messages
+- Responses are generated in the same language the visitor uses
+- For best results in specific languages, add training content in those languages
+
+### Supported Languages
+
+The AI supports all major languages including:
+- English, Spanish, French, German, Portuguese, Italian, Dutch
+- Chinese, Japanese, Korean
+- Arabic, Hebrew, Hindi
+- And many more...
+
+<Note>
+  Interface localization (labels and buttons) requires you to configure each language. AI responses work in any language automatically.
+</Note>
+
+---
+
+## Best Practices
+
+- **Start with your primary language**: Configure your default language completely before adding others
+- **Be consistent**: Use the same tone and terminology across all languages
+- **Test thoroughly**: Preview your chatbot in each configured language
+- **Consider regional variations**: Create separate entries for variants like `en-US` and `en-GB` if needed
+
+<Cta />
