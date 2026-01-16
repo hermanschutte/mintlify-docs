@@ -7,6 +7,12 @@
     "light": "#f4f4f5",
     "dark": "#18181b"
   },
+  "fonts": {
+    "family": "Inter"
+  },
+  "icons": {
+    "library": "lucide"
+  },
   "favicon": "/favicon.svg",
   "navigation": {
     "tabs": [
@@ -18,8 +24,14 @@
             "pages": [
               "index",
               "getting-started/what-is-sitespeakai",
-              "getting-started/lead-capture",
-              "getting-started/personalise-welcome-message"
+              "getting-started/create-your-chatbot"
+            ]
+          },
+          {
+            "group": "Managing Your Chatbot",
+            "pages": [
+              "managing-your-chatbot/lead-capture",
+              "managing-your-chatbot/personalise-welcome-message"
             ]
           }
         ]
