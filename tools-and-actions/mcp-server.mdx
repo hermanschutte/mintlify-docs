@@ -1,0 +1,87 @@
+---
+title: "Add an MCP Server Action"
+sidebarTitle: "MCP Server"
+description: "Enable your AI agent to use AI tools from any remote MCP Server to answer questions and perform actions."
+icon: "server"
+---
+
+import Cta from '/snippets/cta.mdx';
+import { Steps, Step, Frame, Note, Tip } from '@mintlify/components';
+
+The MCP Server (SSE) action allows your AI agent to connect to remote Model Context Protocol servers, enabling access to external AI tools and capabilities.
+
+<Frame>
+  <img src="/images/tools-and-actions/mcp-action.png" alt="MCP Server action" />
+</Frame>
+
+## Adding the MCP Server Action
+
+<Steps>
+  <Step title="Go to Tools & Actions">
+    In your chatbot dashboard, go to **Configuration → Tools & Actions**.
+  </Step>
+  <Step title="Select MCP Server">
+    Find **MCP Server (SSE)** and click **Add**.
+  </Step>
+</Steps>
+
+---
+
+## Configuration
+
+<Frame>
+  <img src="/images/tools-and-actions/mcp-config.png" alt="MCP Server configuration" />
+</Frame>
+
+### Name (required)
+
+A descriptive name for the action.
+
+**Example:** `get_weather_info`
+
+### Description (required)
+
+A description of the action and when it should be used.
+
+**Example:** `Use this action when the user asks about weather information.`
+
+<Note>
+  Make sure the **Name** and **Description** are descriptive so that the agent knows exactly when to use this action.
+</Note>
+
+### Server URL (required)
+
+The URL of the remote MCP Server. This should be an SSE (Server-Sent Events) endpoint.
+
+**Example:** `https://mcp.example.com/sse`
+
+### Headers
+
+Optional headers to send with the request. Must be a valid JSON object.
+
+**Example:**
+```json
+{"Authorization": "Bearer your_access_token"}
+```
+
+---
+
+## Save the Action
+
+Click **Add Action** to enable the MCP Server action for your AI agent.
+
+Your agent will now be able to use AI tools from the connected MCP server to answer questions and perform actions.
+
+---
+
+## Example Use Case
+
+You can create MCP servers using services like [mcpify.ai](https://mcpify.ai/) and have your agent use them to provide additional capabilities.
+
+**Weather example:**
+1. Create a weather MCP server using mcpify.ai
+2. Add it to your agent using the MCP Server action
+3. Your agent can now provide weather information as part of its responses
+
+<Cta />
+

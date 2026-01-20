@@ -1,0 +1,131 @@
+---
+title: "Tools & Actions"
+sidebarTitle: "Overview"
+description: "Add tools and actions to your AI agent to enable additional functionality like querying a database, making API calls, or integrating with third-party services."
+icon: "wrench"
+---
+
+import Cta from '/snippets/cta.mdx';
+import { Card, CardGroup, Frame } from '@mintlify/components';
+
+Tools & Actions extend your chatbot's capabilities beyond answering questions from trained content. They allow your AI agent to retrieve real-time information, perform actions, and integrate with external services.
+
+## Accessing Tools & Actions
+
+Go to **Configuration → Tools & Actions** in your chatbot dashboard to view and add available tools.
+
+<Frame>
+  <img src="/images/tools-and-actions/tools-overview.png" alt="Tools & Actions overview" />
+</Frame>
+
+---
+
+## Available Tools & Actions
+
+### Data & Search
+
+<CardGroup cols={2}>
+  <Card title="Custom API Action" icon="code" href="/tools-and-actions/custom-api-action">
+    Connect to any API to retrieve information or perform actions.
+  </Card>
+  <Card title="SQLite Database" icon="database" href="/tools-and-actions/sqlite-database">
+    Query a SQLite database to answer visitor questions.
+  </Card>
+  <Card title="BookStack: Search Wiki" icon="book-open">
+    Search and retrieve information from your BookStack wiki.
+  </Card>
+  <Card title="Brave: Web Search" icon="search">
+    Search the web for information to answer questions.
+  </Card>
+  <Card title="Firecrawl: Search" icon="flame">
+    Search the web and optionally scrape full page content from results.
+  </Card>
+</CardGroup>
+
+### Scheduling & Payments
+
+<CardGroup cols={2}>
+  <Card title="Cal.com: Make Bookings" icon="calendar" href="/tools-and-actions/calcom">
+    Get available slots and make bookings on your Cal.com calendar.
+  </Card>
+  <Card title="Paddle: Get Customer Subscription" icon="credit-card" href="/tools-and-actions/paddle">
+    Retrieve Paddle Classic subscription information like payment dates or receipt links.
+  </Card>
+  <Card title="Polar: Get Checkout Link" icon="link" href="/tools-and-actions/polar">
+    Retrieve a checkout link for a product or service from Polar.
+  </Card>
+  <Card title="Polar: Get Customer Subscription" icon="receipt" href="/tools-and-actions/polar">
+    Get information about a customer's Polar subscription.
+  </Card>
+</CardGroup>
+
+### Ecommerce
+
+<CardGroup cols={2}>
+  <Card title="Shopify: Get Orders" icon="shopping-bag" href="/tools-and-actions/shopify">
+    Retrieve order information and status updates from your Shopify store.
+  </Card>
+  <Card title="Shopify: Get Products" icon="tag" href="/tools-and-actions/shopify">
+    Search and retrieve product information including pricing and availability.
+  </Card>
+</CardGroup>
+
+### Agent Features
+
+<CardGroup cols={2}>
+  <Card title="Capture Leads" icon="user-plus">
+    Collect information from visitors and add them to your Contacts.
+  </Card>
+  <Card title="Suggested Messages" icon="message-square" href="/tools-and-actions/suggested-messages">
+    Automatically suggest follow-up messages based on the conversation.
+  </Card>
+  <Card title="MCP Server (SSE)" icon="server" href="/tools-and-actions/mcp-server">
+    Connect to any remote MCP Server to use AI tools and perform actions.
+  </Card>
+</CardGroup>
+
+---
+
+## How to Add a Tool
+
+1. Go to **Configuration → Tools & Actions**
+2. Find the tool you want to add
+3. Click the **Add** button
+4. Configure the required settings
+5. Click **Add Action** to enable it
+
+Once added, your AI agent will automatically use the tool when appropriate based on visitor questions.
+
+---
+
+## Detailed Guides
+
+<CardGroup cols={2}>
+  <Card title="Custom API Action" icon="code" href="/tools-and-actions/custom-api-action">
+    Connect your agent to any API endpoint.
+  </Card>
+  <Card title="SQLite Database" icon="database" href="/tools-and-actions/sqlite-database">
+    Enable your agent to chat with your database.
+  </Card>
+  <Card title="Polar" icon="circle-dollar-sign" href="/tools-and-actions/polar">
+    Subscription info and checkout links from Polar.
+  </Card>
+  <Card title="Paddle" icon="credit-card" href="/tools-and-actions/paddle">
+    Paddle Classic subscription information.
+  </Card>
+  <Card title="Suggested Messages" icon="message-square" href="/tools-and-actions/suggested-messages">
+    Auto-generate follow-up message suggestions.
+  </Card>
+  <Card title="Shopify" icon="shopping-bag" href="/tools-and-actions/shopify">
+    Orders and products from your Shopify store.
+  </Card>
+  <Card title="Cal.com" icon="calendar" href="/tools-and-actions/calcom">
+    Calendar availability and booking.
+  </Card>
+  <Card title="MCP Server" icon="server" href="/tools-and-actions/mcp-server">
+    Connect to remote MCP servers.
+  </Card>
+</CardGroup>
+
+<Cta />
+

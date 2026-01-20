@@ -1,0 +1,79 @@
+---
+title: "Chat to Your SQLite Database"
+sidebarTitle: "SQLite Database"
+description: "Enable your AI agent to retrieve data from a SQLite database to answer your visitors' questions."
+icon: "database"
+---
+
+import Cta from '/snippets/cta.mdx';
+import { Steps, Step, Frame, Note } from '@mintlify/components';
+
+The SQLite Database action allows your AI agent to query a SQLite database to retrieve information and answer visitor questions. This is useful for providing real-time data from your application database, inventory systems, or any data stored in SQLite format.
+
+## Adding the SQLite Database Action
+
+<Steps>
+  <Step title="Go to Tools & Actions">
+    In your chatbot dashboard, go to **Configuration → Tools & Actions**.
+  </Step>
+  <Step title="Select SQLite Database">
+    Find the **Sqlite Database** card and click **Add**.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/tools-and-actions/sqlite-database.png" alt="SQLite Database card" />
+</Frame>
+
+---
+
+## Configuration
+
+<Frame>
+  <img src="/images/tools-and-actions/sqlite-database-config.png" alt="SQLite Database configuration" />
+</Frame>
+
+### Name (required)
+
+A descriptive name of the action.
+
+**Example:** `get_assessment_results`
+
+### Description (required)
+
+A description of the action and when it should be used.
+
+**Example:** `Use this action when the user asks about assessment score results.`
+
+<Note>
+  Make sure the **Name** and **Description** are descriptive so that the agent will know exactly when to use this action.
+</Note>
+
+### Database (required)
+
+Upload a SQLite database file (.db) to use.
+
+Click **Choose file** and select your SQLite database file from your computer.
+
+---
+
+## Save the Action
+
+Click the **Add Action** button to add and enable the action for your chatbot.
+
+Your chatbot can now use this action to "chat to your database" and retrieve information to answer your visitors' questions.
+
+---
+
+## Example Use Case
+
+Using the Chinook DB (a sample music store database), your chatbot can answer questions like:
+
+- "What albums do you have by Led Zeppelin?"
+- "How many tracks are in the Rock genre?"
+- "What are the top selling artists?"
+
+The AI agent will automatically generate the appropriate SQL queries to retrieve the information from your database.
+
+<Cta />
+

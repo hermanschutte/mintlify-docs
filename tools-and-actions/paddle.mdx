@@ -1,0 +1,90 @@
+---
+title: "Add a Paddle Subscription Action"
+sidebarTitle: "Paddle"
+description: "Enable your AI agent to retrieve subscription information from your Paddle account."
+icon: "credit-card"
+---
+
+import Cta from '/snippets/cta.mdx';
+import { Steps, Step, Frame, Note } from '@mintlify/components';
+
+The Paddle action allows your AI agent to retrieve information about a customer's Paddle Classic subscription, such as payment dates, invoices, and billing information.
+
+## Adding the Paddle Action
+
+<Steps>
+  <Step title="Go to Tools & Actions">
+    In your chatbot dashboard, go to **Configuration → Tools & Actions**.
+  </Step>
+  <Step title="Select Paddle">
+    Find **Paddle: Get Customer Subscription** and click **Add**.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/tools-and-actions/paddle-action.png" alt="Paddle action" />
+</Frame>
+
+---
+
+## Configuration
+
+<Frame>
+  <img src="/images/tools-and-actions/paddle-config.png" alt="Paddle action configuration" />
+</Frame>
+
+### Name
+
+A descriptive name for the action. Default: `get_customer_subscription_invoice`
+
+### Description
+
+A description of the action and when it should be used. You can customize this or use the provided default.
+
+**Example:**
+> Use this action when the user wants to get information about their subscription like the payment date or a link to a receipt or invoice. Use the subscription id supplied by the user to retrieve the information as well as the from and to date.
+
+### Vendor Id (required)
+
+Your Paddle Vendor ID.
+
+You can find your Vendor ID in the Paddle Dashboard under **Developer Tools → Authentication**.
+
+### Vendor Auth Code (required)
+
+Your Paddle Vendor Auth Code.
+
+You can create a Vendor Auth Code in the Paddle Dashboard under **Developer Tools → Authentication**.
+
+---
+
+## Getting Your Paddle Credentials
+
+<Steps>
+  <Step title="Log in to Paddle">
+    Go to your [Paddle Dashboard](https://vendors.paddle.com).
+  </Step>
+  <Step title="Open Developer Tools">
+    Navigate to **Developer Tools → Authentication**.
+  </Step>
+  <Step title="Copy your credentials">
+    Copy your **Vendor ID** and **Vendor Auth Code** and paste them into SiteSpeakAI.
+  </Step>
+</Steps>
+
+---
+
+## Save the Action
+
+Click **Add Action** to enable the action for your AI agent.
+
+Your agent will now be able to assist visitors with information about their latest invoices and how to update their billing information.
+
+---
+
+## Providing Customer Information
+
+To look up subscription information for a specific customer, combine this action with the [Identify feature](/managing-your-chatbot/deploy-and-install) so your agent has the required information to retrieve subscriptions.
+
+<Cta />
+

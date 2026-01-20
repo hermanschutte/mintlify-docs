@@ -48,8 +48,23 @@
               "training-your-chatbot/website-and-links",
               "training-your-chatbot/bookstack",
               "training-your-chatbot/pdfs",
+              "training-your-chatbot/audio",
               "training-your-chatbot/app-integrations",
               "training-your-chatbot/fine-tuning"
+            ]
+          },
+          {
+            "group": "Tools & Actions",
+            "pages": [
+              "tools-and-actions/overview",
+              "tools-and-actions/custom-api-action",
+              "tools-and-actions/sqlite-database",
+              "tools-and-actions/polar",
+              "tools-and-actions/paddle",
+              "tools-and-actions/suggested-messages",
+              "tools-and-actions/shopify",
+              "tools-and-actions/calcom",
+              "tools-and-actions/mcp-server"
             ]
           }
         ]

@@ -1,0 +1,107 @@
+---
+title: "Add a Custom API Action to Your AI Agent"
+sidebarTitle: "Custom API Action"
+description: "Enable your AI agent to retrieve information or perform actions using any API endpoint."
+icon: "code"
+---
+
+import Cta from '/snippets/cta.mdx';
+import { Steps, Step, Frame, Note } from '@mintlify/components';
+
+The Custom API Action allows your AI agent to connect to any API endpoint to retrieve information or perform actions. This is useful for integrating with your own backend services, third-party APIs, or any system that exposes an API.
+
+## Adding a Custom API Action
+
+<Steps>
+  <Step title="Go to Tools & Actions">
+    In your chatbot dashboard, go to **Configuration → Tools & Actions**.
+  </Step>
+  <Step title="Select Custom API Action">
+    Find the **Custom API Action** card and click **Add**.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/tools-and-actions/custom-api-action.png" alt="Custom API Action card" />
+</Frame>
+
+---
+
+## Configuration
+
+After selecting the action to add, you will need to configure the following settings:
+
+<Frame>
+  <img src="/images/tools-and-actions/custom-api-action-config.png" alt="Custom API Action configuration" />
+</Frame>
+
+### Name (required)
+
+A descriptive name of the action.
+
+**Example:** `get_assessment_results`
+
+### Description (required)
+
+A description of the action and when it should be used.
+
+**Example:** `Use this action when the user asks about assessment score results.`
+
+<Note>
+  Make sure the **Name** and **Description** are descriptive so that the agent will know exactly when to use this action.
+</Note>
+
+### API Request
+
+The API endpoint that the AI should use to retrieve information or perform an action.
+
+#### Method
+
+Select the HTTP method: **GET**, **POST**, **PUT**, **PATCH**, or **DELETE**.
+
+#### URL (required)
+
+The API endpoint URL. You can use template strings like `{{variable_name}}` to include data collected from the user.
+
+**Example:** `https://api.example.com/v1/users/{{user_id}}/orders/{{order_id}}`
+
+### Parameters
+
+Parameters to send with the request if required. Use `{{variable_name}}` to include data collected from the user. Must be a valid JSON object.
+
+**Example:**
+```json
+{"id": "123", "name": "John Doe"}
+```
+
+### Headers
+
+Headers to send with the request if required. Must be a valid JSON object.
+
+**Example:**
+```json
+{"Authorization": "Bearer your_access_token"}
+```
+
+---
+
+## Save the Action
+
+Once you've completed the required details for the API request, click on the **Add Action** button to add and enable the action for your AI agent.
+
+Your agent will now be able to use this API action to retrieve information or perform actions based on visitor questions.
+
+---
+
+## Using Template Variables
+
+For the API **URL** and **Parameters**, you can use template strings to have the agent fill in values based on information retrieved from the user:
+
+- `{{user_id}}` - Will be replaced with the user's ID
+- `{{order_id}}` - Will be replaced with an order ID
+- `{{email}}` - Will be replaced with the user's email
+
+You can also use the [Identity Verification API](/managing-your-chatbot/deploy-and-install) to automatically provide user information to the chatbot.
+
+<Cta />
+

@@ -67,6 +67,7 @@ Track which articles have been migrated from the help center to the new docs sit
 | ✅ | Website & Links (NEW) | `training-your-chatbot/website-and-links.mdx` |
 | ✅ | Train on BookStack wiki 🔥 TOP PAGE | `training-your-chatbot/bookstack.mdx` |
 | ✅ | Can I use PDFs to train my chatbot? | `training-your-chatbot/pdfs.mdx` |
+| ✅ | Audio uploads (NEW) | `training-your-chatbot/audio.mdx` |
 | ✅ | What sources can I use? | `training-your-chatbot/overview.mdx` (merged) |
 | ✅ | App Integrations (Notion, Google Drive, etc.) | `training-your-chatbot/app-integrations.mdx` |
 | ✅ | How do I fine-tune my chatbot? | `training-your-chatbot/fine-tuning.mdx` |
@@ -83,11 +84,25 @@ Track which articles have been migrated from the help center to the new docs sit
 
 ---
 
-## Tools and Actions (8 articles)
+## Tools and Actions (14 actions)
 
 | Status | Original Article | New Location |
 |--------|-----------------|--------------|
-| ⏳ | ... | |
+| ✅ | Tools & Actions Overview (NEW) | `tools-and-actions/overview.mdx` |
+| ✅ | Custom API Action | `tools-and-actions/custom-api-action.mdx` |
+| ✅ | SQLite Database | `tools-and-actions/sqlite-database.mdx` |
+| ⏳ | BookStack: Search Wiki | (Listed in overview) |
+| ⏳ | Brave: Web Search | (Listed in overview) |
+| ✅ | Cal.com: Make Bookings | `tools-and-actions/calcom.mdx` |
+| ⏳ | Capture Leads | (Listed in overview) |
+| ⏳ | Firecrawl: Search | (Listed in overview) |
+| ✅ | MCP Server (SSE) | `tools-and-actions/mcp-server.mdx` |
+| ✅ | Paddle: Get Customer Subscription | `tools-and-actions/paddle.mdx` |
+| ✅ | Polar: Get Checkout Link | `tools-and-actions/polar.mdx` |
+| ✅ | Polar: Get Customer Subscription | `tools-and-actions/polar.mdx` (merged) |
+| ✅ | Shopify: Get Orders | `tools-and-actions/shopify.mdx` |
+| ✅ | Shopify: Get Products | `tools-and-actions/shopify.mdx` (merged) |
+| ✅ | Suggested Messages | `tools-and-actions/suggested-messages.mdx` |
 
 ---
 
@@ -119,4 +134,14 @@ Track which articles have been migrated from the help center to the new docs sit
 | `training-your-chatbot/app-integrations.mdx` | `app-integrations.png`, `notion-oauth.png`, `onenote-oauth.png`, `google-drive-oauth.png`, `discord-channels.png`, `discord-install.png` |
 | `training-your-chatbot/fine-tuning.mdx` | `updated-answers.png` |
 | `training-your-chatbot/website-and-links.mdx` | `website-source.png`, `website-pages-list.png`, `link-source.png`, `link-pages-list.png`, `trained-sources.png` |
+| `training-your-chatbot/audio.mdx` | `audio-upload.png` |
+| `tools-and-actions/overview.mdx` | `tools-overview.png` |
+| `tools-and-actions/custom-api-action.mdx` | `custom-api-action.png`, `custom-api-action-config.png` |
+| `tools-and-actions/sqlite-database.mdx` | `sqlite-database.png`, `sqlite-database-config.png` |
+| `tools-and-actions/polar.mdx` | `polar-actions.png`, `polar-config.png` |
+| `tools-and-actions/paddle.mdx` | `paddle-action.png`, `paddle-config.png` |
+| `tools-and-actions/suggested-messages.mdx` | `suggested-messages.png`, `suggested-messages-config.png` |
+| `tools-and-actions/shopify.mdx` | `shopify-actions.png`, `shopify-config.png` |
+| `tools-and-actions/calcom.mdx` | `calcom-action.png`, `calcom-config.png` |
+| `tools-and-actions/mcp-server.mdx` | `mcp-action.png`, `mcp-config.png` |
 

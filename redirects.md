@@ -35,8 +35,21 @@ Use these redirects in Cloudflare Bulk Redirects to map old help center URLs to 
 | `/help-center/training-your-chatbot/training-your-custom-gpt-on-bookstack-wiki` | `/docs/training-your-chatbot/bookstack` |
 | `/help-center/training-your-chatbot/can-i-use-pdfs-to-train-my-chatbot` | `/docs/training-your-chatbot/pdfs` |
 | `/help-center/training-your-chatbot/what-sources-can-i-use-to-custom-train-my-chatgpt-chatbot` | `/docs/training-your-chatbot/overview` |
-| `/help-center/training-your-chatbot/how-do-i-enable-my-api-as-a-source-for-my-chatbot` | `/docs/training-your-chatbot/api-source` |
 | `/help-center/training-your-chatbot/how-do-i-fine-tune-my-chatbot` | `/docs/training-your-chatbot/fine-tuning` |
 | `/help-center/training-your-chatbot/how-do-i-train-my-custom-chatbot` | `/docs/training-your-chatbot/overview` |
-| `/help-center/training-your-chatbot/how-do-i-enable-my-chatbot-to-chat-to-my-sql-database` | `/docs/training-your-chatbot/sql-database` |
+
+## Tools & Actions
+
+| Source URL | Destination URL |
+|------------|-----------------|
+| `/help-center/tools-and-actions` | `/docs/tools-and-actions/overview` |
+| `/help-center/tools-and-actions/api-action` | `/docs/tools-and-actions/custom-api-action` |
+| `/help-center/training-your-chatbot/how-do-i-enable-my-api-as-a-source-for-my-chatbot` | `/docs/tools-and-actions/custom-api-action` |
+| `/help-center/training-your-chatbot/how-do-i-enable-my-chatbot-to-chat-to-my-sql-database` | `/docs/tools-and-actions/sqlite-database` |
+| `/help-center/tools-and-actions/polar` | `/docs/tools-and-actions/polar` |
+| `/help-center/tools-and-actions/paddle` | `/docs/tools-and-actions/paddle` |
+| `/help-center/tools-and-actions/suggested-messages` | `/docs/tools-and-actions/suggested-messages` |
+| `/help-center/tools-and-actions/shopify` | `/docs/tools-and-actions/shopify` |
+| `/help-center/tools-and-actions/cal-com` | `/docs/tools-and-actions/calcom` |
+| `/help-center/tools-and-actions/model-context-protocol` | `/docs/tools-and-actions/mcp-server` |
 

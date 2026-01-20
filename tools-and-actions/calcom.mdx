@@ -1,0 +1,82 @@
+---
+title: "Add Cal.com Booking Action"
+sidebarTitle: "Cal.com"
+description: "Enable your AI agent to check availability and make bookings on your Cal.com calendar."
+icon: "calendar"
+---
+
+import Cta from '/snippets/cta.mdx';
+import { Steps, Step, Frame, Note } from '@mintlify/components';
+
+The Cal.com action allows your AI agent to check your calendar availability and help visitors book appointments directly through the chatbot.
+
+<Frame>
+  <img src="/images/tools-and-actions/calcom-action.png" alt="Cal.com action" />
+</Frame>
+
+## Adding the Cal.com Action
+
+<Steps>
+  <Step title="Go to Tools & Actions">
+    In your chatbot dashboard, go to **Configuration → Tools & Actions**.
+  </Step>
+  <Step title="Select Cal.com">
+    Find **Cal.com: Make Bookings** and click **Add**.
+  </Step>
+</Steps>
+
+---
+
+## Configuration
+
+<Frame>
+  <img src="/images/tools-and-actions/calcom-config.png" alt="Cal.com action configuration" />
+</Frame>
+
+### Name
+
+A descriptive name for the action. Default: `book_calcom_appointment`
+
+### Description
+
+A description of the action and when it should be used. The default description guides the agent on how to handle booking requests, date ranges, and displaying available slots.
+
+### Cal.com Event URL (required)
+
+The URL of the Cal.com event to book. This URL looks like:
+
+```
+https://cal.com/your-username/your-event-name
+```
+
+---
+
+## Finding Your Cal.com Event URL
+
+<Steps>
+  <Step title="Go to Cal.com">
+    Log in to your [Cal.com dashboard](https://app.cal.com).
+  </Step>
+  <Step title="Open Event Types">
+    Go to **Event Types** at [app.cal.com/event-types](https://app.cal.com/event-types).
+  </Step>
+  <Step title="Copy the event URL">
+    Find the event you want to use and copy its URL.
+  </Step>
+</Steps>
+
+---
+
+## Save the Action
+
+Once you've entered the Event URL, click **Add Action** to enable it.
+
+Your chatbot will now be able to:
+- Check availability on your calendar
+- Show available time slots to visitors
+- Allow visitors to book appointments
+
+Bookings will automatically be added to your Cal.com calendar.
+
+<Cta />
+
