@@ -1,0 +1,73 @@
+---
+title: "Brave: Web Search Action"
+sidebarTitle: "Brave: Web Search"
+description: "Enable your AI chatbot to search the web for information and use the results to answer visitor questions."
+icon: "search"
+---
+
+import Cta from '/snippets/cta.mdx';
+import { Steps, Step, Frame, Note } from '@mintlify/components';
+
+The **Brave: Web Search** action enables your AI support agent to search the web for information and use the results to answer questions. This is useful as a fallback when your chatbot can't find the answer in its trained knowledge base, or when visitors ask about current events that require up-to-date information.
+
+## How it Works
+
+When a visitor asks a question that your chatbot can't answer from its training data, it will use Brave Search to look up relevant information from the web and include it in the response.
+
+## Add a Brave: Web Search Action
+
+<Steps>
+  <Step title="Go to Tools & Actions">
+    In your chatbot dashboard, click **Configuration** in the sidebar, then select **Tools & Actions**.
+  </Step>
+  <Step title="Click Add Action">
+    Click the **+ Add Action** button.
+  </Step>
+  <Step title="Search for Brave">
+    Type "Brave" in the search field to filter the available actions.
+  </Step>
+  <Step title="Select Brave: Web Search">
+    Click **Add** next to **Brave: Web Search**.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/tools-and-actions/brave-search-action.png" alt="Select Brave: Web Search action" />
+</Frame>
+
+### Configure the Action
+
+<Steps>
+  <Step title="Set Name and Description">
+    - **Name**: Give your action a descriptive name (e.g., `web_search`)
+    - **Description**: Describe when the AI should use this action. The default is: "Use this action when the user asks about a topic or question that you do not know the answer to. Use the search query supplied by the user to search the web for information and use the results to answer the question."
+  </Step>
+  <Step title="Set Domain Restrictions (Optional)">
+    Enter a comma-separated list of domains that the agent is allowed to search (e.g., `google.com, wikipedia.org, youtube.com`).
+    
+    Leave blank to allow all domains.
+  </Step>
+  <Step title="Add Action">
+    Click the **Add Action** button to save and enable the action.
+  </Step>
+</Steps>
+
+<Frame>
+  <img src="/images/tools-and-actions/brave-search-config.png" alt="Brave: Web Search configuration" />
+</Frame>
+
+---
+
+## Example Use Cases
+
+- **Current events**: Answer questions about recent news or events not in your training data
+- **General knowledge fallback**: Provide answers when the chatbot's knowledge base doesn't cover a topic
+- **Price lookups**: Find current pricing information from specific websites
+- **Research assistance**: Help visitors find information from trusted sources
+
+<Note>
+  Web search results may vary and include content from external sources. Consider using Domain Restrictions to limit searches to trusted domains for your use case.
+</Note>
+
+<Cta />
+

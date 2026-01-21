@@ -92,10 +92,10 @@ Track which articles have been migrated from the help center to the new docs sit
 | ✅ | Custom API Action | `tools-and-actions/custom-api-action.mdx` |
 | ✅ | SQLite Database | `tools-and-actions/sqlite-database.mdx` |
 | ✅ | BookStack: Search Wiki | `tools-and-actions/bookstack-search.mdx` |
-| ⏳ | Brave: Web Search | (Listed in overview) |
+| ✅ | Brave: Web Search | `tools-and-actions/brave-search.mdx` |
 | ✅ | Cal.com: Make Bookings | `tools-and-actions/calcom.mdx` |
-| ⏳ | Capture Leads | (Listed in overview) |
-| ⏳ | Firecrawl: Search | (Listed in overview) |
+| ✅ | Capture Leads | `tools-and-actions/capture-leads.mdx` |
+| ✅ | Firecrawl: Search | `tools-and-actions/firecrawl-search.mdx` |
 | ✅ | MCP Server (SSE) | `tools-and-actions/mcp-server.mdx` |
 | ✅ | Paddle: Get Customer Subscription | `tools-and-actions/paddle.mdx` |
 | ✅ | Polar: Get Checkout Link | `tools-and-actions/polar.mdx` |
@@ -145,4 +145,7 @@ Track which articles have been migrated from the help center to the new docs sit
 | `tools-and-actions/calcom.mdx` | `calcom-action.png`, `calcom-config.png` |
 | `tools-and-actions/mcp-server.mdx` | `mcp-action.png`, `mcp-config.png` |
 | `tools-and-actions/bookstack-search.mdx` | `bookstack-search-action.png`, `bookstack-search-config.png` |
+| `tools-and-actions/brave-search.mdx` | `brave-search-action.png`, `brave-search-config.png` |
+| `tools-and-actions/firecrawl-search.mdx` | `firecrawl-action.png`, `firecrawl-config.png` |
+| `tools-and-actions/capture-leads.mdx` | `capture-leads-action.png`, `capture-leads-config.png`, `capture-leads-contacts.png` |
 
