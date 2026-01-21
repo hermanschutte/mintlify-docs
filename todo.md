@@ -91,7 +91,7 @@ Track which articles have been migrated from the help center to the new docs sit
 | ✅ | Tools & Actions Overview (NEW) | `tools-and-actions/overview.mdx` |
 | ✅ | Custom API Action | `tools-and-actions/custom-api-action.mdx` |
 | ✅ | SQLite Database | `tools-and-actions/sqlite-database.mdx` |
-| ⏳ | BookStack: Search Wiki | (Listed in overview) |
+| ✅ | BookStack: Search Wiki | `tools-and-actions/bookstack-search.mdx` |
 | ⏳ | Brave: Web Search | (Listed in overview) |
 | ✅ | Cal.com: Make Bookings | `tools-and-actions/calcom.mdx` |
 | ⏳ | Capture Leads | (Listed in overview) |
@@ -144,4 +144,5 @@ Track which articles have been migrated from the help center to the new docs sit
 | `tools-and-actions/shopify.mdx` | `shopify-actions.png`, `shopify-config.png` |
 | `tools-and-actions/calcom.mdx` | `calcom-action.png`, `calcom-config.png` |
 | `tools-and-actions/mcp-server.mdx` | `mcp-action.png`, `mcp-config.png` |
+| `tools-and-actions/bookstack-search.mdx` | `bookstack-search-action.png`, `bookstack-search-config.png` |
 

@@ -52,4 +52,5 @@ Use these redirects in Cloudflare Bulk Redirects to map old help center URLs to 
 | `/help-center/tools-and-actions/shopify` | `/docs/tools-and-actions/shopify` |
 | `/help-center/tools-and-actions/cal-com` | `/docs/tools-and-actions/calcom` |
 | `/help-center/tools-and-actions/model-context-protocol` | `/docs/tools-and-actions/mcp-server` |
+| `/help-center/tools-and-actions/bookstack` | `/docs/tools-and-actions/bookstack-search` |
 

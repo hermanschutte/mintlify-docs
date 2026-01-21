@@ -59,6 +59,7 @@
               "tools-and-actions/overview",
               "tools-and-actions/custom-api-action",
               "tools-and-actions/sqlite-database",
+              "tools-and-actions/bookstack-search",
               "tools-and-actions/polar",
               "tools-and-actions/paddle",
               "tools-and-actions/suggested-messages",
