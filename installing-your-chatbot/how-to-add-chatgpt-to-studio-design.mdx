@@ -1,0 +1,117 @@
+---
+title: "How to add ChatGPT to Studio.Design"
+description: "How to add your custom ChatGPT trained chatbot to your Studio.Design website."
+sidebarTitle: "Studio.Design"
+icon: "pencil-ruler"
+---
+
+import Cta from '/snippets/cta.mdx';
+
+You want to embed your custom trained chatbot in your **Studio.Design** website page. Here's how to add ChatGPT to Studio.Design with SiteSpeakAI.
+
+## Add your chatbot to your **Studio.Design** website
+
+**[Studio.Design](https://studio.design/)** is a no-code website builder crafted for designers, creatives, and small businesses who want full visual freedom without touching code. It's especially popular for building portfolios, landing pages, and branded websites that look polished and perform well.
+
+For more info see **[Studio.Design](https://studio.design/)**.
+
+### In SiteSpeakAI
+
+Select your chatbot from the dropdown menu at the top, click on the **Install Chatbot** section in the sidebar, select **iFrame** and then click on the **Copy Code** button to copy your code snippet.
+
+![Copy iFrame code](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/0ZbAkCjMQ9tIYIqjQ45f0AQAc3S64eCeNORhyk1q.png)
+
+### In Studio.Design
+
+1. Log into your **Studio.Design** account and on your dashboard, hover over the project you want to add your widget to and select **Design Editor**
+
+![Dashboard](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/FAMVe25l5Vi0tl4jjmS4oBcRwpsmeBSqkIWrBySP.png)
+
+2. Your project will now be opened in edit mode with the default page displayed
+
+**Please Note**: Studio.Design doesn't allow adding the chatbot button using the JavaScript snippet, but we can create a popup Modal page that contains the SiteSpeakAI chatbot dialogue iframe code (as copied at the beginning of this tutorial) and link this to a button on the webpage.
+
+Let's create the **Modal** page. 
+
+3. Select the **Pages** option in the left sidebar
+
+![Select Pages](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/7TgsnPvTFPvekigs5IruKIJDsRYmtLPWF3UTS1dT.png)
+
+4. On the **Pages** tab, click on **Add** to add a page. This allows you to add **Regular and Dynamic Pages**, **Regular and Dynamic Modals**, **Redirect Pages**, **Search Pages** and **Password Pages**. For our purpose we will choose a **Regular Modal** page.
+
+![Select Add](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/wzXkpy9EGdzbH7wZycIl1UInzTagIA2udtDq1EVy.png)
+
+5. Select Modal (Regular)
+
+![Select Modal (Regular)](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/b96K14ga1ESxQdycthcfYHj1Ku5RI8cyde87qMJm.png)
+
+6. The blank Modal page will now be listed under Pages
+
+![Modal (Regular) created](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/oSh7DX3tPXkbQfJLfdm293SURGhtOMgWRgRJTOY5.png)
+
+7. Select **Add** and drag the **Embed Blank \</>** box into the Modal page
+
+![Drag the Embed Blank box](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/j09DLM3at5HRPa9cwORNyUlwhNNnjnXaBnB0KvpH.png)
+
+8. Insert your iframe code that you copied at the start into the **\</> Custom** box. You will see the chatbot being displayed in the Embed Box on the Modal page - we will resize this in the next steps
+
+![iframe displayed](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/NXKnT9c2euEGEnICuzAtUKJ9EH3yboXKyWTZI1wd.png)
+
+9. The actual iframe size is width=450px and height = 600px. Set the Modal page size to match the iframe size as set in the iframe code attributes
+
+![Set the Modal size](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/eLM6PBfNa8y5cTQDkNEHNMtNNyRD83my5y2MTDHs.png)
+
+10. Select the **Embed Box** containing the iframe and set the size to fill the Modal page
+
+![Set the iframe size](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/W6sSeSbOzEKBIh6YYuuWeEpc8KE5p4ICwalLe21F.png)
+
+11. Select the Modal page settings option
+
+![Modal settings option](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/y62fgGR4o3fgsG8y9oV5ZbpdzWvDLt5dLZ70U1D9.png)
+
+12. Enable the **Use Path** setting
+
+![Enable the Use Path setting](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/NO0K7HQbzaCXe1H2fMmRpKf1QMPoyOA7vOYvE5ZK.png)
+
+We are now going to add a **Button** to your webpage that will display the popup Modal page containing your chatbot dialogue. The best place will be to add the button to the page footer. If you don't have a page footer you can add it now (this is not in the scope of this tutorial, please check the Studio.Design documents on how to add a footer).
+
+13. Select the **Page** you want to add your chatbot to
+
+![Select the page](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/SzQcbJqBnF1y3K6TemkiJ1f6b9bb9XnxLl4xuPtK.png)
+
+14. Drag a **Box** onto your page footer
+
+![Drag a Box](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/4VDVG56nigfMasB16pB6oU0jm1O3W4U6Ypg0chjd.png)
+
+15. Drag a **Button** into the Box
+
+![Drag a Button](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/s5KYFFONfc9xqvJa8Kz8pQ28PR8z9K8dOmSki5Fw.png)
+
+**Please note**: The buttons used in **Studio.Design** can't display an icon so we will add appropriate text to the button. In our case we added **Support**. 
+
+![Change the Button text](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/IHveKHfdNAGj9P9r6ZEfpCGK1WiQC9JSXvQqc3mX.png)
+
+16. To change the size, margin, padding, shape and fill colour of the button, select the button box and use the attributes in the top menu to make your changes. In our case we have changed the default black button colour to a colour that matches the webpage
+
+![Change the Button appearance](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/HxscFVsSDz5fpmmBOqaeAvbCcHY3d7y7F9wlQXKl.png)
+
+17. To enable the Modal to be activated when clicking on your button, you must **link** the Modal you created to the Box containing the button
+
+![Link the Modal to the Box](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/45QPYynZ4Fb6xb3RIX2coC3cb34tOAqEeu3nVQfi.png)
+
+18. Select **Live Preview** to preview view your webpage
+
+![Select Live Preview](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/r7FPhOeIRcASJYfVfpGC1EvlaNdEDcxr3UjBYNIq.png)
+
+19. **Voila!** Here is your button on your live page! 
+
+![Your Button](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/iLVggmeFh1BvrubdUSeQRelMjVEh4ewqRKsA1nF4.png)
+
+20. If you click on the button it will display the chatbot dialogue
+
+![Chatbot dialogue](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/dO0WdxQBM5uy5TROFfLedNuIS3BaQGn9KEuEf1Bo.png)
+
+Your chatbot is now added to your **Studio.Design** website and your customers can start interacting with it!
+
+<Cta />
+

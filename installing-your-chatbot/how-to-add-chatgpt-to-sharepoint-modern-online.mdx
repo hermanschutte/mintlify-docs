@@ -1,0 +1,164 @@
+---
+title: "How to add ChatGPT to SharePoint Modern Online"
+description: "How to add your custom ChatGPT trained chatbot to your SharePoint Modern Online website."
+sidebarTitle: "SharePoint"
+icon: "microsoft"
+---
+
+import Cta from '/snippets/cta.mdx';
+
+You want to embed your custom trained chatbot in your **SharePoint Modern Online** website page. Here's how to add ChatGPT to SharePoint Modern Online with SiteSpeakAI.
+
+## Add your chatbot To your **SharePoint Modern Online** website
+
+SharePoint doesn't allow adding custom HTML as other website builders do. You can use Microsoft Copilot Studio to create a webpart but we found a **Power Popups** app that will do the job for us. This popup can be triggered by clicking on a button, a link or an image. **Power Popups** offer a 7 day free full function option which allows you to test the functionality.
+
+Due to the fact that we have no access to the header and footer code of the website, the popup can not be added to display site wide, you must add the popup to each page of your website.
+
+In this tutorial we will look at an image as a trigger. The button is similar but can only contain text on it so you can put any relevant text on it. The image will be displayed with a minimum size of 100x100px. You can play around with the size. The popup trigger will be added to a section. Sections can have different layouts, i.e. 1, 2 or 3 columns but we suggest a 3 column layout so you can basically add the popup trigger left, center or right.
+
+### In SiteSpeakAI
+
+Select your chatbot from the dropdown menu at the top, click on the **Install Chatbot** section in the sidebar and select the **iFrame** option. Then select and copy the iframe source URL. This will be used as the URL for the iFrame being displayed in the popup.
+
+![Copy iFrame Source URL](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/fn9itnjQ6XFfwJx3r6NnAnF14QJaVX2NqOkzosO6.png)
+
+### In SharePoint Modern Online
+
+
+1. Obtain your **Power Popups** webpart.
+
+- Goto https://appsource.microsoft.com/en-US/home.
+
+- Click on the **Apps** dropdown and select **SharePoint apps**.
+
+![Select Apps on MS App Source](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/CADeVP29zRhMt48JQoG5dg40ORCJz52j46BmR8zt.png)
+
+![Select SharePoint apps](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/njI80fMlhhEGZcEy7mNjogWBu7RTJfjSJVQOPc3h.png)
+
+- Scroll down until you get the **Power Popups** app and click on **Get it now**.
+
+![Select Power Popups](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/iIigMDXTs0sXHQvdGbaC0DsW7agtzvPnYef8EEac.png)
+
+- Confirm your details and click on **Get it now** to start installation.
+
+![Confirm your Microsoft details](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/eOdKVtUsyCtZN0nyjt41EZbEbwelXaT9UjQvaiQz.png)
+
+- The **SharePoint Store** will now be displayed. It also displays a video link where the popup is explained. Click on **Add**.
+
+![SharePoint Store](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/mXsiHGHqqrll342OgXidxXcLjawmZqzwib6j326v.png)
+
+- The app (webpart) will then be added to the Apps site in SharePoint and will be visible under **Site contents**. It will be available as a webpart for your SharePoint website.
+
+![SharePoint Site Contents](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/Wyaym6SyoekXd9lv3I31gJAVKe1Wtc4CihXvCC1e.png)
+
+2. On your SharePoint start page, select the website you want to work with.
+
+![SharePoint Start Page](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/7Y9cTUKEI64YESW7E5UUhTJnmnH8ZeODBs0dLXii.png)
+
+3. If you want to add the popup trigger as an image you will have to add the image to the site library. You can add it to the site assets. You will find **Site Assets** under **Site contents**. Upload you image to Site Assets via the upload option.
+
+![SharePoint Popup trigger image in Site Assets](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/rOWCEixDMs8MsaBTdXOrLe35VqlykELR4wo3XKzl.png)
+
+4. Return to your website page and prepare the area you want to add the popup trigger to.
+
+5. Click on **Edit** to open the page in edit mode.
+
+![Edit your page](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/OW47VKsKaEqbH5gC9nR2Y2qds2XqgV4ZGBjNj17d.png)
+
+6. Insert a new section just above the page footer.
+
+![Insert new section](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/cw7hIv6Uo2AAMLXYFcPgyDOagAqdQFUogtILH4hn.png)
+
+7. Select a 3 column section. This will allow you to place the popup trigger left, center or right on the page.
+
+![Select a 3 column section](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/qBaoFTIqpEvjHrxElnABW4coNt5wQeY3WmqWcCUQ.png)
+
+8. Insert a webpart in the right most column.
+
+![Add a webpart in the right most column](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/1jjMLyDBT6Lyfr7NUc2fYzp8eK5UKwzpj39EKV1T.png)
+
+9. Scroll down and select the **Power Popups** webpart.
+
+![Select Power Popups](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/ibguDtApfRBTbTtO319hMSxlquwtHTjka1ltiTeg.png)
+
+10. Highlight and delete the webpart title. This will remove the additional title while displaying the popup trigger.
+
+![Highlight and Delete Title](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/CO4kaoQio38tHm3dpCeY9CULU0Rhog8c4yG7Rhug.png)
+
+11. Click on **Edit web part**.
+
+![Edit web part](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/Lj15gWTAtsYbpu6LXwIMnyFiJlaBRwaTCdrO2O3C.png)
+
+12. We will now configure the popup web part. The following parts must be configured:
+
+Trigger Configuration, Content Configuration, Overlay Configuration and Popup Configuration.
+	
+a. **Trigger Configuration**. This is where we will set up the **Popup Trigger** type, i.e. Button, Image or Link.
+
+![Select Trigger type](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/HwCEN1pNherahz7x6irscgf4MMAeQt0laQfGpcUL.png)
+
+- Button setup.
+
+![Button Setup](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/Pu1JclXtOQFKYD175tQtSQ4yOLuvQL8B7NZWWRde.png)
+
+- Link setup.
+
+![Link Setup](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/UHpSbOwRxoZNXbNBN1Afn8SNXP0dZiTTAlchsDkK.png)
+
+- Image Setup. For the image trigger we have to select the image as well.
+
+![Image Setup](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/0h0BEClJ6rhpsKGjhwLcvxxaxa9wKPyQgL6rXqdv.png)
+
+- Image selection (this is the image we added to the Site contents).
+
+.  Select site.
+
+![Select site](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/91nJ8TwLbWD9xHaIsFyrRmXxFy6pdqr76qWkwe1j.png)
+
+.  Select **Site Assets**.
+
+![Select site assets](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/t2QFetxWpptjQpkZvg8tPQTwsjTMKUHIJv3pHBYI.png)
+
+.  Select the image and click on **Open**.
+
+![Select image](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/I8pC97zoBDUshJgmXuntYOX60IBwmIrKnryviomw.png)
+
+b. **Content Configuration**. This configures how the popup trigger displays as well as the source of the popup. The popup source must be set to **Page URL** and for the Page URL you must enter the **iFrame URL** you copied from the chatbot setup at the start of this tutorial.
+
+![Content Config](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/WXH3PW3IfJjOpxtRsCQsfaOPzKPseJCZwNe76K87.png)
+
+c. **Overlay Configuration**. 
+
+![Overlay Config](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/EyQuHb5zR7ITVLxxCc6V9bBEmEBxbzJlX8qppt3l.png)
+
+d. **Popup Configuration**. 
+
+- Position can be left right or center, left, right, top left, top center, top right, bottom left, bottom center or bottom right).
+
+![Popup Config (Type & Position)](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/LFKq943UKERtqqKNjrWNfOMhQctMGoeRpd7vOjiu.png)
+
+![Popup Animation](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/UV0ARheK1HTd8l9NDqzpSNAVz4tzB07WhiNbNct7.png)
+
+![Popup Animation](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/S9Ht7bZXZN0sg8CPAXcHCXYx59E4bxFwh6GGqTsA.png)
+
+13. Click on **Apply**.
+
+![Popup Animation](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/eYg1Zwr20GyzFq0t6NS01OJvcHKjipTt1nBL2rMF.png)
+
+14. Click on Publish (or RePublish if you have Published the page before).
+
+![Publish](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/mjxsmN2f6B2m8p09SxwjisOX28vABKSu5Wl2biic.png)
+
+15. Your chatbot button will now display on the page.
+
+![Chatbot button](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/njVwWe8t0t69GPoSETruUO8o2dOn5XQlNxMBzoFJ.png)
+
+16. If you click on the button it will display your chatbot dialogue. To close click on the **X**. You can also close it by pressing **ESC** if you have set it up in the configuration.
+
+![Chatbot dialogue](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/4wQk8MuzAsOwZ1JRtGwBCU2h5YjNOyzjxC9pY8z5.png)
+
+17. That's it, your chatbot is now added to your **SharePoint** website and your customers can start interacting with it!
+
+<Cta />
+

@@ -1,0 +1,118 @@
+---
+title: "Studio.DesignにChatGPTチャットボットを追加する方法"
+description: "ChatGPT でトレーニングしたカスタム チャットボットを Studio.Design Web サイトに追加する方法。"
+sidebarTitle: "Studio.Design"
+icon: "pencil-ruler"
+tag: "JA"
+---
+
+import Cta from '/snippets/cta.mdx';
+
+**Studio.Design** のウェブサイトページに、カスタムトレーニング済みのチャットボットを埋め込みたいとします。SiteSpeakAI を使用して ChatGPT を Studio.Design に追加する手順は次のとおりです。
+
+## Studio.Design のウェブ サイトにチャットボットを追加する
+
+**[Studio.Design](https://studio.design/ja)** は、コードを一切使用せずに自由なビジュアルデザインを求めるデザイナー、クリエイター、中小企業向けに設計された、コード不要のウェブサイトビルダーです。洗練されたデザインと優れたパフォーマンスを兼ね備えたポートフォリオ、ランディングページ、ブランドウェブサイトの構築に特に人気があります。
+
+詳しくは、**[Studio.Design](https://studio.design/ja)** をご覧ください。
+
+### SiteSpeakAI の場合
+
+上部のドロップダウンメニューからチャットボットを選択し、サイドバーの「**チャットボットをインストール**」セクションをクリックして「**iFrame**」を選択し、「**コードをコピー**」ボタンをクリックしてコードスニペットをコピーします。
+
+![Copy iFrame code](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/0ZbAkCjMQ9tIYIqjQ45f0AQAc3S64eCeNORhyk1q.png)
+
+### Studio.Design で
+
+1. **Studio.Design** アカウントにログインし、ダッシュボードでウィジェットを追加したいプロジェクトにマウスオーバーして「**デザインエディター**」を選択します。
+
+![Studio dashboard](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/FAMVe25l5Vi0tl4jjmS4oBcRwpsmeBSqkIWrBySP.png)
+
+2. プロジェクトが編集モードで開き、デフォルトのページが表示されます。
+
+**注意**: Studio.Design では、JavaScript スニペットを使用してチャットボットボタンを追加することはできませんが、SiteSpeakAI チャットボットダイアログの iframe コード（このチュートリアルの冒頭でコピーしたもの）を含むポップアップモーダルページを作成し、これをウェブページ上のボタンにリンクすることは可能です。
+
+それでは、**モーダル** ページを作成しましょう。
+
+3. 左側のサイドバーで**ページ**オプションを選択します
+
+![Select pages](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/7TgsnPvTFPvekigs5IruKIJDsRYmtLPWF3UTS1dT.png)
+
+4. 「**ページ**」タブで「**追加**」をクリックしてページを追加します。これにより、**通常ページと動的ページ**、**通常モーダルと動的モーダル**、**リダイレクトページ**、**検索ページ**、**パスワードページ**を追加できます。ここでは**通常モーダル**ページを選択します。
+
+![Add page](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/wzXkpy9EGdzbH7wZycIl1UInzTagIA2udtDq1EVy.png)
+
+5. 「モーダル（通常）」を選択
+
+![Select modal](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/b96K14ga1ESxQdycthcfYHj1Ku5RI8cyde87qMJm.png)
+
+6. 「ページ」に空のモーダルページが表示されます
+
+![Blank modal](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/oSh7DX3tPXkbQfJLfdm293SURGhtOMgWRgRJTOY5.png)
+
+7. **追加** を選択し、「**空白を埋め込む \</>**」ボックスをモーダルページにドラッグします。
+
+![Add embed box](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/j09DLM3at5HRPa9cwORNyUlwhNNnjnXaBnB0KvpH.png)
+
+8. 最初にコピーしたiframeコードを **\</>カスタム** ボックスに挿入します。モーダルページの埋め込みボックスにチャットボットが表示されます。次の手順でサイズを変更します。
+
+![Insert iframe](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/NXKnT9c2euEGEnICuzAtUKJ9EH3yboXKyWTZI1wd.png)
+
+9. 実際のiframeのサイズは幅450ピクセル、高さ600ピクセルです。iframeのコード属性で設定されているiframeのサイズに合わせて、モーダルページのサイズを設定してください。
+
+![Set modal size](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/eLM6PBfNa8y5cTQDkNEHNMtNNyRD83my5y2MTDHs.png)
+
+10. iframeを含む**埋め込みボックス**を選択し、モーダルページ全体に表示されるサイズを設定します。
+
+![Set embed size](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/W6sSeSbOzEKBIh6YYuuWeEpc8KE5p4ICwalLe21F.png)
+
+11. モーダルページ設定オプションを選択します
+
+![Modal settings](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/y62fgGR4o3fgsG8y9oV5ZbpdzWvDLt5dLZ70U1D9.png)
+
+12. **パスを使用** 設定を有効にします
+
+![Enable use path](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/NO0K7HQbzaCXe1H2fMmRpKf1QMPoyOA7vOYvE5ZK.png)
+
+チャットボットのダイアログを含むポップアップモーダルページを表示する**ボタン**をウェブページに追加します。ボタンはページフッターに追加するのが最適です。ページフッターがない場合は、ここで追加できます（このチュートリアルではフッターの追加方法については扱いませんので、Studio.Design ドキュメントをご確認ください）。
+
+13. チャットボットを追加したい**ページ**を選択します
+
+![Select page](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/SzQcbJqBnF1y3K6TemkiJ1f6b9bb9XnxLl4xuPtK.png)
+
+14. **ボックス**をページフッターにドラッグします
+
+![Drag box to footer](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/4VDVG56nigfMasB16pB6oU0jm1O3W4U6Ypg0chjd.png)
+
+15. **ボタン** をボックスにドラッグします
+
+![Drag button](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/s5KYFFONfc9xqvJa8Kz8pQ28PR8z9K8dOmSki5Fw.png)
+
+**ご注意**: **Studio.Design** で使用するボタンにはアイコンを表示できないため、適切なテキストをボタンに追加します。この例では、「**サポート**」と入力しました。
+
+![Button text](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/IHveKHfdNAGj9P9r6ZEfpCGK1WiQC9JSXvQqc3mX.png)
+
+16. ボタンのサイズ、余白、パディング、形状、塗りつぶし色を変更するには、ボタンボックスを選択し、上部のメニューの属性を使用して変更を加えます。この例では、デフォルトの黒いボタンの色をウェブページと一致する色に変更しました。
+
+![Style button](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/HxscFVsSDz5fpmmBOqaeAvbCcHY3d7y7F9wlQXKl.png)
+
+17. ボタンをクリックしたときにモーダルがアクティブになるようにするには、作成したモーダルをボタンを含むボックスに**リンク**する必要があります。
+
+![Link modal](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/45QPYynZ4Fb6xb3RIX2coC3cb34tOAqEeu3nVQfi.png)
+
+18. 選択**ライブプレビュー** でウェブページをプレビュー表示します
+
+![Live preview](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/r7FPhOeIRcASJYfVfpGC1EvlaNdEDcxr3UjBYNIq.png)
+
+19. **出来上がり！** ライブページにボタンが表示されます！
+
+![Button on page](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/iLVggmeFh1BvrubdUSeQRelMjVEh4ewqRKsA1nF4.png)
+
+20. ボタンをクリックすると、チャットボットのダイアログが表示されます。
+
+![Chatbot dialogue](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/dO0WdxQBM5uy5TROFfLedNuIS3BaQGn9KEuEf1Bo.png)
+
+これで、**Studio.Design** ウェブサイトにチャットボットが追加され、お客様がチャットボットとやり取りできるようになりました。
+
+<Cta />
+

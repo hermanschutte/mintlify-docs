@@ -43,19 +43,104 @@ Track which articles have been migrated from the help center to the new docs sit
 
 ## Installing Your Chatbot (94 articles)
 
+**Progress: 94/94 completed ✅**
+
 | Status | Original Article | New Location |
 |--------|-----------------|--------------|
-| ⏳ | Add ChatGPT To HTML | |
-| ⏳ | Add ChatGPT To WordPress | |
-| ⏳ | Add ChatGPT To Shopify | |
-| ⏳ | Add ChatGPT To Webflow | |
-| ⏳ | Add ChatGPT To Framer | |
-| ⏳ | Add ChatGPT To Slack | |
-| ⏳ | Add ChatGPT To Notion | |
-| ⏳ | Add ChatGPT To Carrd | |
-| ⏳ | Add ChatGPT To Bubble | |
-| ⏳ | Add ChatGPT To Showit | |
-| ⏳ | ... (84 more) | |
+| ✅ | How to add ChatGPT to Shopify | `installing-your-chatbot/how-to-add-chatgpt-to-shopify.mdx` |
+| ✅ | How to add ChatGPT to WordPress | `installing-your-chatbot/how-to-add-chatgpt-to-wordpress.mdx` |
+| ✅ | How to add ChatGPT to Slack | `installing-your-chatbot/how-to-add-chatgpt-to-slack.mdx` |
+| ✅ | How to add ChatGPT to Notion | `installing-your-chatbot/how-to-add-chatgpt-to-notion.mdx` |
+| ✅ | How to add ChatGPT to Carrd | `installing-your-chatbot/how-to-add-chatgpt-to-carrd.mdx` |
+| ✅ | How to add ChatGPT to Webflow | `installing-your-chatbot/how-to-add-chatgpt-to-webflow.mdx` |
+| ✅ | How to add ChatGPT to Wix | `installing-your-chatbot/how-to-add-chatgpt-to-wix.mdx` |
+| ✅ | How to add ChatGPT to Showit | `installing-your-chatbot/how-to-add-a-chatgpt-chatbot-to-showit.mdx` |
+| ✅ | How to add ChatGPT to Weebly | `installing-your-chatbot/how-to-add-chatgpt-to-weebly.mdx` |
+| ✅ | How to add ChatGPT to Squarespace | `installing-your-chatbot/how-to-add-chatgpt-to-squarespace.mdx` |
+| ✅ | How to add ChatGPT to ZOHO | `installing-your-chatbot/how-to-add-chatgpt-to-zoho.mdx` |
+| ✅ | How to add ChatGPT to WebWave | `installing-your-chatbot/how-to-add-chatgpt-to-webwave.mdx` |
+| ✅ | How to add ChatGPT to Umso | `installing-your-chatbot/how-to-add-chatgpt-to-umso.mdx` |
+| ✅ | How to add ChatGPT to Publii | `installing-your-chatbot/how-to-add-chatgpt-to-publii.mdx` |
+| ✅ | How to add ChatGPT to Simvoli | `installing-your-chatbot/how-to-add-chatgpt-to-simvoli.mdx` |
+| ✅ | How to add ChatGPT to upsitely | `installing-your-chatbot/how-to-add-chatgpt-to-upsitely.mdx` |
+| ✅ | How to add ChatGPT to Softr | `installing-your-chatbot/how-to-add-chatgpt-to-softr.mdx` |
+| ✅ | How to add ChatGPT to SitePad Builder | `installing-your-chatbot/how-to-add-chatgpt-to-sitepadbuilder.mdx` |
+| ✅ | How to add ChatGPT to SITEJET | `installing-your-chatbot/how-to-add-chatgpt-to-sitejet.mdx` |
+| ✅ | How to add ChatGPT to Telegram | `installing-your-chatbot/how-to-add-chatgpt-to-telegram.mdx` |
+| ✅ | How to add ChatGPT to Photler | `installing-your-chatbot/how-to-add-chatgpt-to-photler.mdx` |
+| ✅ | How to add ChatGPT to Webstudio | `installing-your-chatbot/how-to-add-chatgpt-to-webstudio.mdx` |
+| ✅ | How to add ChatGPT to Silex | `installing-your-chatbot/how-to-add-chatgpt-to-silex.mdx` |
+| ✅ | How to add ChatGPT to Zegashop | `installing-your-chatbot/how-to-add-chatgpt-to-zegashop.mdx` |
+| ✅ | How to add ChatGPT to TeleportHQ | `installing-your-chatbot/how-to-add-chatgpt-to-teleporthq.mdx` |
+| ✅ | How to add ChatGPT to Plasmic | `installing-your-chatbot/how-to-add-chatgpt-to-plasmic.mdx` |
+| ✅ | How to add ChatGPT to Discord | `installing-your-chatbot/how-to-add-chatgpt-to-discord.mdx` |
+| ✅ | How to add ChatGPT to Pagewiz | `installing-your-chatbot/how-to-add-chatgpt-to-pagewiz.mdx` |
+| ✅ | How to add ChatGPT to Pagemaker | `installing-your-chatbot/how-to-add-chatgpt-to-pagemaker.mdx` |
+| ✅ | How to add ChatGPT to Versoly | `installing-your-chatbot/how-to-add-chatgpt-to-versoly.mdx` |
+| ✅ | How to add ChatGPT to Waveon | `installing-your-chatbot/how-to-add-chatgpt-to-waveon.mdx` |
+| ✅ | How to add ChatGPT to Unicorn Platform | `installing-your-chatbot/how-to-add-chatgpt-to-unicorn-platform.mdx` |
+| ✅ | How to add ChatGPT to IM COSMOS | `installing-your-chatbot/how-to-add-chatgpt-to-im-cosmos.mdx` |
+| ✅ | How to add ChatGPT to Elementor | `installing-your-chatbot/how-to-add-chatgpt-to-elementor.mdx` |
+| ✅ | How to add ChatGPT to any HTML website | `installing-your-chatbot/how-to-add-chatgpt-to-any-html-website.mdx` |
+| ✅ | How to add ChatGPT to b12.io | `installing-your-chatbot/how-to-add-chatgpt-to-b12.mdx` |
+| ✅ | How to add ChatGPT to BigCommerce | `installing-your-chatbot/how-to-add-chatgpt-to-bigcommerce.mdx` |
+| ✅ | How to add ChatGPT to Blogger | `installing-your-chatbot/how-to-add-chatgpt-to-blogger.mdx` |
+| ✅ | How to add ChatGPT to Bludit | `installing-your-chatbot/how-to-add-chatgpt-to-bludit.mdx` |
+| ✅ | How to add ChatGPT to BookStack | `installing-your-chatbot/how-to-add-chatgpt-to-bookstack.mdx` |
+| ✅ | How to add ChatGPT to Framer | `installing-your-chatbot/how-to-add-chatgpt-to-framer.mdx` |
+| ✅ | How to add ChatGPT to Bubble | `installing-your-chatbot/how-to-add-chatgpt-to-bubble.mdx` |
+| ✅ | How to add ChatGPT to Brizy Cloud | `installing-your-chatbot/how-to-add-chatgpt-to-brizy-cloud.mdx` |
+| ✅ | How to add ChatGPT to Concrete CMS | `installing-your-chatbot/how-to-add-chatgpt-to-concretecms.mdx` |
+| ✅ | How to add ChatGPT to SnapPages | `installing-your-chatbot/how-to-add-chatgpt-to-snappages.mdx` |
+| ✅ | How to add ChatGPT to Bowwe | `installing-your-chatbot/how-to-add-chatgpt-to-bowwe.mdx` |
+| ✅ | How to add ChatGPT to Restaurantify | `installing-your-chatbot/how-to-add-chatgpt-to-restaurantify.mdx` |
+| ✅ | How to add ChatGPT to Mijnwebwinkel | `installing-your-chatbot/how-to-add-chatgpt-to-mijnwebwinkel.mdx` |
+| ✅ | How to add ChatGPT to createwebsite.io | `installing-your-chatbot/how-to-add-chatgpt-to-createwebsite-io.mdx` |
+| ✅ | How to add ChatGPT to genstore.ai | `installing-your-chatbot/how-to-add-chatgpt-to-genstore-ai.mdx` |
+| ✅ | How to add ChatGPT to Droip | `installing-your-chatbot/how-to-add-chatgpt-to-droip.mdx` |
+| ✅ | How to add ChatGPT to Durable | `installing-your-chatbot/how-to-add-chatgpt-to-durable.mdx` |
+| ✅ | How to add ChatGPT to ezsite.ai | `installing-your-chatbot/how-to-add-chatgpt-to-ezsite-ai.mdx` |
+| ✅ | How to add ChatGPT to Format | `installing-your-chatbot/how-to-add-chatgpt-to-format.mdx` |
+| ✅ | How to add ChatGPT to WebSite X5 Pro | `installing-your-chatbot/how-to-add-chatgpt-to-website-x5-pro.mdx` |
+| ✅ | How to add ChatGPT to GitHub Pages | `installing-your-chatbot/how-to-add-chatgpt-to-github-pages.mdx` |
+| ✅ | How to add ChatGPT to GRAV | `installing-your-chatbot/how-to-add-chatgpt-to-grav.mdx` |
+| ✅ | How to add ChatGPT to HubSpot CMS | `installing-your-chatbot/how-to-add-chatgpt-to-hubspot-cms.mdx` |
+| ✅ | How to add ChatGPT to Hostinger Horizons | `installing-your-chatbot/how-to-add-chatgpt-to-hostinger-horizons.mdx` |
+| ✅ | How to add ChatGPT to imcreator | `installing-your-chatbot/how-to-add-chatgpt-to-imcreator.mdx` |
+| ✅ | How to add ChatGPT to Jimdo | `installing-your-chatbot/how-to-add-chatgpt-to-jimdo.mdx` |
+| ✅ | How to add ChatGPT to Koha | `installing-your-chatbot/how-to-add-chatgpt-to-koha.mdx` |
+| ✅ | How to add ChatGPT to Kubio | `installing-your-chatbot/how-to-add-chatgpt-to-kubio.mdx` |
+| ✅ | How to add ChatGPT to LAUNCHED | `installing-your-chatbot/how-to-add-chatgpt-to-launched.mdx` |
+| ✅ | How to add ChatGPT to Lodgify | `installing-your-chatbot/how-to-add-chatgpt-to-lodgify.mdx` |
+| ✅ | How to add ChatGPT to Moodle LMS | `installing-your-chatbot/how-to-add-chatgpt-to-moodle-lms.mdx` |
+| ✅ | How to add ChatGPT to MotoCMS | `installing-your-chatbot/how-to-add-chatgpt-to-motocms.mdx` |
+| ✅ | How to add ChatGPT to Netjet | `installing-your-chatbot/how-to-add-chatgpt-to-netjet.mdx` |
+| ✅ | How to add ChatGPT to Odoo | `installing-your-chatbot/how-to-add-chatgpt-to-odoo.mdx` |
+| ✅ | How to add ChatGPT to Rocket | `installing-your-chatbot/how-to-add-chatgpt-to-rocket.mdx` |
+| ✅ | How to add ChatGPT to one.com | `installing-your-chatbot/how-to-add-chatgpt-to-one-com.mdx` |
+| ✅ | How to add ChatGPT to Open Real Estate | `installing-your-chatbot/how-to-add-chatgpt-to-open-real-estate.mdx` |
+| ✅ | How to add ChatGPT to Pagecloud | `installing-your-chatbot/how-to-add-chatgpt-to-pagecloud.mdx` |
+| ✅ | How to add ChatGPT to WebSim.ai | `installing-your-chatbot/how-to-add-chatgpt-to-websim-ai.mdx` |
+| ✅ | How to add ChatGPT to Siter.io | `installing-your-chatbot/how-to-add-chatgpt-to-siter-io.mdx` |
+| ✅ | How to add ChatGPT to Skywork.ai | `installing-your-chatbot/how-to-add-chatgpt-to-skywork-ai.mdx` |
+| ✅ | How to add ChatGPT to Designmodo | `installing-your-chatbot/how-to-add-chatgpt-to-designmodo.mdx` |
+| ✅ | How to add ChatGPT to DragDropr | `installing-your-chatbot/how-to-add-chatgpt-to-dragdropr.mdx` |
+| ✅ | How to add ChatGPT to Pixpa | `installing-your-chatbot/how-to-add-chatgpt-to-pixpa.mdx` |
+| ✅ | How to add ChatGPT to Plone | `installing-your-chatbot/how-to-add-chatgpt-to-plone.mdx` |
+| ✅ | How to add ChatGPT to SharePoint Modern Online | `installing-your-chatbot/how-to-add-chatgpt-to-sharepoint-modern-online.mdx` |
+| ✅ | How to add ChatGPT to SimpleShop | `installing-your-chatbot/how-to-add-chatgpt-to-simpleshop.mdx` |
+| ✅ | How to add ChatGPT to Scene | `installing-your-chatbot/how-to-add-chatgpt-to-scene.mdx` |
+| ✅ | How to add ChatGPT to ZipWP | `installing-your-chatbot/how-to-add-chatgpt-to-zipwp.mdx` |
+| ✅ | How to add ChatGPT to b2evolution | `installing-your-chatbot/how-to-add-chatgpt-to-b2evolution.mdx` |
+| ✅ | How to add ChatGPT to Apage Studio | `installing-your-chatbot/how-to-add-chatgpt-to-apage-studio.mdx` |
+| ✅ | How to add ChatGPT to Beefree | `installing-your-chatbot/how-to-add-chatgpt-to-beefree.mdx` |
+| ✅ | How to add ChatGPT to iCreate Editor | `installing-your-chatbot/how-to-add-chatgpt-to-icreate-editor.mdx` |
+| ✅ | How to add ChatGPT to LightFunnels | `installing-your-chatbot/how-to-add-chatgpt-to-lightfunnels.mdx` |
+| ✅ | How to add ChatGPT to Marcom Robot | `installing-your-chatbot/how-to-add-chatgpt-to-marcom-robot.mdx` |
+| ✅ | How to add ChatGPT to Studio.Design | `installing-your-chatbot/how-to-add-chatgpt-to-studio-design.mdx` |
+| ✅ | Mijnwebwinkel (Dutch) | `installing-your-chatbot/hoe-voeg-je-chatgpt-toe-aan-mijnwebwinkel.mdx` |
+| ✅ | Studio (Japanese) | `installing-your-chatbot/how-to-add-chatgpt-to-studio-japanese.mdx` |
+| ✅ | Studio.Design (Japanese) | `installing-your-chatbot/how-to-add-chatgpt-to-studio-design-japanese.mdx` |
 
 ---
 
@@ -124,6 +209,7 @@ Track which articles have been migrated from the help center to the new docs sit
 |---------|---------|
 | `snippets/cta.mdx` | General signup CTA for end of pages |
 | `snippets/cta-lead-capture.mdx` | Contextual CTA for lead capture related pages |
+| `snippets/install-copy-code.mdx` | Standard "In SiteSpeakAI" copy code instructions for install articles |
 
 ---
 
@@ -143,15 +229,6 @@ Track which articles have been migrated from the help center to the new docs sit
 | ✅ | GET /v1/{chatbot_id}/sources | `api-reference/sources/get-sources.mdx` |
 | ✅ | GET /v1/me (User Account) | `api-reference/user/get-user.mdx` |
 | ✅ | GET /v1/me/chatbots | `api-reference/user/get-chatbots.mdx` |
-
----
-
-## Snippets Created
-
-| Snippet | Purpose |
-|---------|---------|
-| `snippets/cta.mdx` | General signup CTA for end of pages |
-| `snippets/cta-lead-capture.mdx` | Contextual CTA for lead capture related pages |
 
 ---
 

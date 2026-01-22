@@ -1,0 +1,75 @@
+---
+title: "How to add ChatGPT to Plone"
+description: "How to add your custom ChatGPT trained chatbot to your Plone website."
+sidebarTitle: "Plone"
+icon: "python"
+---
+
+import Cta from '/snippets/cta.mdx';
+
+You want to embed your custom trained chatbot in your **Plone** website page. Here's how to add ChatGPT to Plone with SiteSpeakAI.
+
+## Add your chatbot to your **Plone** website
+
+### In SiteSpeakAI
+
+Select your chatbot from the dropdown menu at the top, click on the **Install Chatbot** section in the sidebar and then click on the **Copy Code** button to copy your code snippet.
+
+![Copy Code](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/AhWBetkLnQtGB3Gz9y7MRQZwEWYq3KFmQdxLxsrX.png)
+
+### In Plone
+
+1. Log into your **Plone** account and select the **Admin** option on the dashboard (bottom left)
+
+![Select Admin option](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/zOApT5ulSN5xagYTpPxigsSSipsTBZk4TDKgDQtq.png)
+
+**Please Note!**
+
+Your chatbot snippet contains Javascript code (**JS**) and to allow adding your chatbot snippet to Plone there is one setting you have to change before adding the snippet.
+
+2. On the list of Admin options, select **Site Setup**
+
+![Select Site Setup](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/YbkEyV8z9MQxGbe4QTr29hx2hIu8GFxVlgvgiiWF.png)
+
+3. Scroll down on the Site Setup configuration panel and under **Security**, select the **HTML Filtering** item
+
+![Select HTML Filtering](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/Rjvx7kFuDZ2AT4WTeySYpStayAId6ufsJDnXKg4a.png)
+
+4. Remove the **script** tag under **Nasty tags**
+
+![Remove the script tag](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/wncM99HX0cFTIVdxqR7XKopNHcO5ccJ3LZvxOaTX.png)
+
+5. Add the **script** tag under **Valid tags** and click on **Save**
+
+![Add the script tag](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/4Y7wKM9NMo702ivJZrgzC3k8zsBarUgrzTo4GjzN.png)
+
+Now we can continue to add our chatbot snippet to your website.
+
+6. Select the **Admin** option and select **Site Setup**
+
+![Select Site Setup](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/5eKcRUpY7ExOD3xbuscrgkBAc8lJypcOJ1UhQv7q.png)
+
+7. Under **General**, select the **Site** item
+
+![Select Site item](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/TZh9xohQ15UDZJECyneF7EpMNcXCawZhi2nDMkR1.png)
+
+8. Insert your snippet in the **JavaScript for web statistics support** text box
+
+![Insert your snippet](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/2cySLFPv3IVK8tKAV3ykkw1s3RQozPQ9mJf8hVxj.png)
+
+9. Scroll down on the **Site Settings** page and click on **Save**
+
+![Click on Save](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/wSzRRHYAknfvUmYAkWGSXWeQGdww3NqoOWuPZUfc.png)
+
+10. Your chatbot button will now be displayed on your **Plone** website page(s)
+
+![Chatbot button](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/4Cb3DheAeIMxXsmHiDhli8fpeKLC5b30HC5CL99z.png)
+
+11. If you click on the button it will display the chatbot dialogue
+
+![Chatbot dialogue](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/4kXt5FUryG56mrmGTMFKsO4sLcPnDfAUvK9TwrjJ.png)
+
+Your chatbot is now added to your **Plone** website and your visitors/customers can start interacting with it!
+
+<Cta />
+

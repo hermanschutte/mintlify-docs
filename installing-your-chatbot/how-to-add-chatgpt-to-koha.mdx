@@ -1,0 +1,75 @@
+---
+title: "How to add a ChatGPT AI support agent to Koha"
+description: "How to add your custom ChatGPT trained AI support agent to your Koha library website."
+sidebarTitle: "Koha"
+icon: "book"
+---
+
+import Cta from '/snippets/cta.mdx';
+
+You want to embed your custom trained AI support agent in your **Koha** library website OPAC page. Here's how to add an AI support agent to Koha with SiteSpeakAI.
+
+**Koha** is a free and open-source Integrated Library System (ILS) designed to help libraries of all sizes manage their collections, cataloging, circulation, and patron services. It's known for being relatively easy to customize and adaptable to various library needs.
+
+**Website URL:** [https://www.koha-library.org/](https://www.koha-library.org/)
+
+## Add your AI support agent to your **Koha** website
+
+- A bit of information:
+> **OPAC** stands for **O**nline **P**ublic **A**ccess **C**atalog, which is an online database of materials held by a library or group of libraries. All references to OPAC means this is what the online user (visitor or registered patron) will see, thus when you add the AI support agent to the OPAC preferences, it will be available on all the pages displayed for online users.
+
+### In SiteSpeakAI
+
+- Please note:
+>Koha doesn't allow the standard SiteSpeakAI snippet to be added to the OPACUserJS value, only the JavaScript function code snippet. In the next step where get the JS snippet for your AI support agent, we will only copy the actual function code part of the snippet.
+
+Log into your SiteSpeakAI account and select your agent from the dropdown menu at the top, click on the **Install Agent** section in the sidebar, select the **Javascript** tab and then copy the function code part of the Javascript snippet (**DO NOT click on *Copy Code!!***). You will use this later when we insert your snippet.
+
+![uploads/help-center/images/zdnZOVxdt11mV9A2JgFizxcWgtazIOwhOO1NM3gy.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/zdnZOVxdt11mV9A2JgFizxcWgtazIOwhOO1NM3gy.png)
+
+You will then end up with the following (The **url.js** part will be your specific code):
+
+```javascript
+(function(){
+	d=document;
+	s=d.createElement("script");
+	s.src="https://sitespeak.ai/chatbots/url.js";
+	s.async=1;
+	d.getElementsByTagName("head")[0].appendChild(s);
+})();
+```
+  
+### In Koha
+
+1. Log into your **Koha** account as administrator (or teacher/staff with admin privileges) and select **Tools** from the menu list
+
+![uploads/help-center/images/UafiieqkBxayh6XcN3C6MCa1gtlkQc8fpb5Yhv3m.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/UafiieqkBxayh6XcN3C6MCa1gtlkQc8fpb5Yhv3m.png)
+
+2. Select **HTML customizations** from the list of Tools under **Additional tools**
+
+![uploads/help-center/images/KR6yWAlG7pgIRUrKYq08WXMbuG058IJCuocZQQxI.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/KR6yWAlG7pgIRUrKYq08WXMbuG058IJCuocZQQxI.png)
+
+3. Select **OPACUserJS** under **Additional content: HTML customizations**
+
+![uploads/help-center/images/iumM2v6RaE2SMm9fRD8LTmhlzxd4SeSaja1brElT.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/iumM2v6RaE2SMm9fRD8LTmhlzxd4SeSaja1brElT.png)
+
+4. Select **Click to edit**
+
+![uploads/help-center/images/H1LsvlL9opGBql19VxIQ0x7oNTfgtuO7uBH9UoQW.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/H1LsvlL9opGBql19VxIQ0x7oNTfgtuO7uBH9UoQW.png)
+
+5. Insert the copied function part of the JavaScript snippet in the **Value** text box and click on **Save all OPAC preferences**
+
+![uploads/help-center/images/kn11RQnBDYVEQdDbn8fFE9xdzDCpzJtvZ6H9t0c0.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/kn11RQnBDYVEQdDbn8fFE9xdzDCpzJtvZ6H9t0c0.png)
+
+6. Your AI support agent button will now be displayed on your **Koha** library website pages
+
+![uploads/help-center/images/dMp9UwZpxX0qF7pSL1beCwaWdOk56bZX2UvEbTG0.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/dMp9UwZpxX0qF7pSL1beCwaWdOk56bZX2UvEbTG0.png)
+
+7. If you click on the button it will display the AI support agent dialogue
+
+![uploads/help-center/images/HHd95DZAS6cehpexOscaca4KxiWD8znd5mtqEdci.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/HHd95DZAS6cehpexOscaca4KxiWD8znd5mtqEdci.png)
+
+Your AI support agent has now been added to your **Koha** website and your visitors/patrons can start interacting with it!
+
+<Cta />
+

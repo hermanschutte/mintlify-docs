@@ -1,0 +1,140 @@
+---
+title: "Hoe voeg je ChatGPT toe aan Mijnwebwinkel"
+description: "Hoe je je aangepaste ChatGPT-getrainde AI support agent aan je Mijnwebwinkel-webshop kunt toevoegen."
+sidebarTitle: "Mijnwebwinkel"
+icon: "store"
+tag: "NL"
+---
+
+import Cta from '/snippets/cta.mdx';
+
+Je wilt je op maat getrainde AI support agent insluiten op je **Mijnwebwinkel** webshop-pagina. Hier is hoe je een AI support agent kunt toevoegen aan Mijnwebwinkel met SiteSpeakAI.
+
+**Mijnwebwinkel** is een platform dat het heel makkelijk maakt om je eigen webshop te starten en te runnen, zonder dat je een expert hoeft te zijn. Het biedt een gebruiksvriendelijke interface, waarmee je snel producten kunt toevoegen, bestellingen kunt beheren en betalingen kunt accepteren. Je kunt je webshop aanpassen aan je eigen merk en je producten eenvoudig presenteren. Het is een goede optie voor kleine tot middelgrote bedrijven die snel en relatief goedkoop een online winkel willen opzetten.
+
+**Website:** [https://mijnwebwinkel.nl/](https://mijnwebwinkel.nl/)
+
+## Voeg je AI support agent toe aan je Mijnwebwinkel webshop
+
+### In SiteSpeakAI
+
+Log in bij uw SiteSpeakAI account en selecteer uw agent uit het dropdown menu bovenaan. Klik op de **Install Agent** sectie in de zijbalk, selecteer het **Javascript** tabblad en klik vervolgens op de **Copy Code** knop om uw agent codefragment te kopiëren.
+
+![Copy code snippet](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/5203Mj7Os72pyNR6VTZSSjp2hdLthGMMAZ234LEC.png)
+
+### In Mijnwebwinkel
+
+Voor het toevoegen van Custom HTML (bijvoorbeeld je AI support agent JS snippet zoals hierboven gekopieerd) is het noodzakelijk dat je **Google Tag Manager** (GTM) hebt gekoppeld - dit is beschikbaar vanuit een Mijnwebwinkel PRO abonnement. Heb je dit nog niet gedaan, lees dan via onderstaande link hoe je een Google Tag Manager account aanmaakt en hoe je deze kunt koppelen in de beheeromgeving van je webshop. Doe dit voordat je verder gaat met SiteSpeakAI.
+
+[Informatie over Google Tag Manager en het aanmaken van een account](https://marketingplatform.google.com/about/tag-manager/).
+
+### A. Hoe integreer ik Google Tag Manager?
+
+Met Google Tag Manager plaats je HTML-tags op je webshop, bijvoorbeeld om een live chat te integreren. Google heeft al een aantal veelgebruikte tags voor je klaarstaan, zodat je ze in een mum van tijd in je winkel kunt plaatsen.
+
+Om je SiteSpeakAI AI support agent op je winkelpagina's weer te geven, moet je een aangepaste tag maken. Hoe je GTM aan je winkel kunt koppelen, wordt hieronder uitgelegd. We zullen je dan laten zien hoe je de tag kunt maken die je nodig hebt (het vereist wat technische kennis van jouw kant, maar als je volgt wat we je laten zien, zou het niet te moeilijk moeten zijn!).
+
+**Let op!** Tags die je toepast, kunnen de manier waarop je webwinkel werkt beïnvloeden. Het is daarom belangrijk dat u regelmatig de werking van uw winkel en bestelproces controleert.
+
+Bovendien willen we u erop wijzen dat het SiteSpeakAI ondersteuningsteam geen ondersteuning biedt bij het maken van tags.
+
+Nu is het tijd om aan de slag te gaan met Google Tag Manager.
+
+### B. Een Google Tag Manager-account maken
+
+1. Ga naar Google Tag Manager en meld je aan met je Google-account. Begin met het maken van een account en een container. Deze container koppel je later aan je shop en bevat je tag. Vul de volgende informatie in:
+
+   - Vul onder **Account Setup** je **Account Name** in. Dit is verplicht, je kunt de naam van je bedrijf of winkel gebruiken.
+   - Selecteer je **Country** indien nodig.
+   - Je kunt het delen van je gegevens met Google en anderen selecteren (zie info hierover in popup).
+   - Voer bij **Container Setup** de domeinnaam van de winkel in bij **Container name**.
+   - Selecteer als Target platform de optie **Web**.
+
+2. Klik op **Create**.
+
+![Create GTM account](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/9fnlaWSC1db2k4Tksp10kyvimVoScenhCY3Ae94S.png)
+
+3. De **Google Tag Manager Terms of Service Agreement** wordt nu weergegeven. Als je akkoord gaat met de daarin genoemde voorwaarden, vink dan het selectievakje onderaan de pagina **Service Agreement** aan en klik op **Yes** bovenaan de pagina.
+
+4. Er verschijnt nu een stukje code op het scherm. Je hoeft deze niet in je webwinkel te plaatsen, laat dat maar aan ons over! Dat gaat volledig automatisch zodra je deze instructie hebt voltooid.
+
+### C. Uw container koppelen
+
+1. Kies op je **Mijnwebwinkel** Dashboard in de linker menubalk voor **Marketing** en klik op **Google services**.
+
+![Marketing menu](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/CTaO0WrB0QkQbQlaTgCTh1mDzrbIcB1fOjMUC9Mi.png)
+
+2. Open op de pagina met Google services het tabblad **Google Tag Manager** en klik op de knop **Connect with Google** om verbinding te maken met je Google-account.
+
+![Connect with Google](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/nrNFqdDuGTbIgrvnkN1NqGreooojrfMavXmbwBx9.png)
+
+3. Google geeft een dialoogvenster **Sign in with Google** weer. Selecteer het account dat je wilt gebruiken om te koppelen aan Google Tag Manager.
+
+![Sign in with Google](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/QvXQ0D29ucpYNtRJgrNJDwsgoy8vHCjtZNHh9Run.png)
+
+4. Schakel vervolgens de optie **Make use of the Google Tag Manager** in en selecteer je container. Is je container al geselecteerd? Dan hoef je alleen nog maar op **Save** te klikken.
+
+![Enable GTM](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/wPU4dRq2ykJvha88MMEgxhgWbMeEhyoXvrSj7SIV.png)
+
+### D. Je tag toevoegen
+
+Dat viel wel mee, toch? 
+
+Tijd om je container te vullen! Naast de kant-en-klare tags die Google al heeft, kun je ook je eigen HTML-tags maken. Deze optie wordt bijvoorbeeld gebruikt om een live chat toe te voegen op elke pagina van je winkel, of om Google Maps te tonen op je contactpagina. Voor SiteSpeakAI wordt het gebruikt om je chatbot weer te geven op je Mijnwebwinkel winkelpagina's.
+
+1. Zorg ervoor dat je bent ingelogd in het **Google Tag Manager**-account en selecteer de container die je aan je winkel hebt gekoppeld. Selecteer **Tags** in het menu aan de linkerkant en klik op **New** om een nieuwe tag aan te maken.
+
+![Create new tag](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/LhnwanjRoidBhjQAO2UEH4Mjn5y9WGykjNvRxVdJ.png)
+
+2. Geef uw tag een naam en klik vervolgens op het blok **Tag Configuration**.
+
+![Tag configuration](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/BnAsxMKN7cQpIuDqdlEt812Xb2DbsYbduoQV7mLh.png)
+
+3. Kies in de lijst **Choose tag type** de **Custom HTML** optie.
+
+![Choose Custom HTML](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/bzZvmMEAcxSazY9cxJVkdKWDPCHnBd4wCrX5w2Yy.png)
+
+4. Plak de JS-code die je aan het begin van deze tutorial hebt gekopieerd in het HTML-veld en klik op **Save**.
+
+![Paste code](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/7I6O8cOnxBNot9ryoHfBgPEJqBL0sVTem7WP20Bo.png)
+
+5. Er verschijnt een pop-upvenster waarin staat dat je nog geen trigger hebt geselecteerd. Klik op **Add Trigger**.
+
+![Add trigger](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/HViEY03erUMJas19YvQZv1bzudtsKKUyGNuyUwl1.png)
+
+6. Selecteer vervolgens de optie **All Pages**.
+
+![Select All Pages](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/YUd34wEnUl1B4sWtI28leUgXKVkzwadGjz8uZN7V.png)
+
+7. **All Pages** (Page View) werd dan weergegeven onder **Firing Triggers**.
+
+![Firing triggers](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/p5fZYES6qCJC1GYECDoBSIjLQEJPiTuLVx0lleou.png)
+
+8. Klik nogmaals op **Save** rechtsboven in je scherm om je tag op te slaan. Zodra je tag is opgeslagen, klik je op **Submit** rechtsboven in je scherm.
+
+![Save and submit](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/ChCnrxKivmZc5jYQRNstpFakjm7N55hSxeR1c5ME.png)
+
+9. Klik vervolgens op **Publish**.
+
+![Publish](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/0KDHPliueDMkMF6yaNFR7QObxyUaURw0wy5FdCS0.png)
+
+10. Geef je tag een naam en beschrijving (als je dat wilt) en klik op **Continue**.
+
+![Name and continue](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/VVwcAPbkkjXNVmgCXiAg3ulw6BUNoVux9AIb6P62.png)
+
+11. Het volgende scherm verschijnt:
+
+![Confirmation screen](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/1CTVSQM03c0XydKrc7ZE1VHxlEKilWyxDSBMswXB.png)
+
+12. Je AI support agent knop wordt nu weergegeven op je **Mijnwebwinkel** webshoppagina
+
+![Agent button displayed](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/haZrzu9AxRbtyiNkWHuZzZLn7vJJr7COhZNL8LVD.png)
+
+13. Als je op de knop klikt, zal het dialoog van de AI support agent worden getoond
+
+![Agent dialogue](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/QoGzpk922B5U6c3aNJtOF8jwBpcHJhS1YnT6km3O.png)
+
+Je AI support agent is nu aan je **Mijnwebwinkel** webshop toegevoegd, en je bezoekers/klanten kunnen nu daarmee interageren!
+
+<Cta />
+

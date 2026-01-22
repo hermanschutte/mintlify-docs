@@ -1,0 +1,93 @@
+---
+title: "How to add a ChatGPT AI support agent to BookStack"
+description: "How to add your custom ChatGPT trained AI support agent to your BookStack web-based application."
+sidebarTitle: "BookStack"
+icon: "book-open"
+---
+
+import Cta from '/snippets/cta.mdx';
+
+You want to embed your custom trained AI support agent in your **BookStack** website page. Here's how to add an AI support agent to BookStack with SiteSpeakAI.
+
+**BookStack** is a simple, self-hosted, easy-to-use application/platform for organising and storing information. Being a self-hosted application means that  you choose where you want to host it. The main point to keep in mind here is that you need access to the BookStack **installation files** on the server. 
+
+By default, BookStack doesn't allow iframes. You can however edit the .env file to allow specific iframe sources. In our case we will add the appropriate command to the .env file to allow the SiteSpeakAI AI support agent to function with your **BookStack** installation -
+
+see https://www.bookstackapp.com/docs/admin/security/#iframe-source-control for a description of what we are going to do next.
+
+## A. Setting up *BookStack* to allow iframes
+
+1. If you have installed **BookStack** with **Docker**, then the **.env** file will be located in the **/config/www/** folder.
+
+- Open the **.env** file and add the following line just below the **APP_URL= line** (make sure the URL, ***https://chatbot.sitespeak.ai***, is spelled correctly).
+
+	ALLOWED_IFRAME_SOURCES="https://chatbot.sitespeak.ai"
+	
+- Note that if you already have iframe sources added to the .env file, then you can just add the *https://chatbot.sitespeakai.ai* to the line (seperated by a space)
+
+- Save the file and restart the server
+
+2. If you have installed **BookStack** on a Linux server (or Linux desktop) then the **.env** file will be located in the **var/www/bookstack** folder. The file is a hidden file, so to make sure that you do find the file, run a **ls -a** command in the **bookstack** folder to show hidden files.
+
+- Open a **Terminal** and change to the **var/www** folder
+- Run a **ls** command to display the sub-folders in the var/www folder
+- Change to the **bookstack** folder
+- Run a **ls -a** command to show all files and sub-folders in the bookstack folder (including hidden ones)
+![uploads/help-center/images/N6sWSMM0OnbUfQFUuGjX2W7dBsmrEEZDV0h8KmCc.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/N6sWSMM0OnbUfQFUuGjX2W7dBsmrEEZDV0h8KmCc.png)
+
+- Open the **.env** file with **vi** or **nano** (or whatever command line editor you prefer) 
+![uploads/help-center/images/n5Pxo61Vq24dKgn6bIptMJF912tK3IHW7nP8sCI6.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/n5Pxo61Vq24dKgn6bIptMJF912tK3IHW7nP8sCI6.png)
+
+- Insert the following line into the file just below the **APP_URL= line** (make sure the URL, ***https://chatbot.sitespeak.ai***, is spelled correctly).
+
+	ALLOWED_IFRAME_SOURCES="https://chatbot.sitespeak.ai"
+   
+- Note that if you already have iframe sources added to the .env file, then you can just add the *https://chatbot.sitespeakai.ai* to the line (seperated by a space)
+![uploads/help-center/images/dSwh2uvujXEyT06z3bNmFPlAlWMOB97iXQKob6QV.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/dSwh2uvujXEyT06z3bNmFPlAlWMOB97iXQKob6QV.png)
+
+- Save the file (**^O - Write Out**) and then exit the editor (**^X - Exit**). These commands could of course differ if you use a different editor.
+
+- Restart the webserver (in this case **Apache**) to allow BookStack to reread the .env file
+![uploads/help-center/images/s4Pusc30h5D1G5L7DMVu5e0jFJl3q31GUXD6DRCM.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/s4Pusc30h5D1G5L7DMVu5e0jFJl3q31GUXD6DRCM.png)
+
+Your BookStack installation will now be able to display your ChatGPT AI support agent properly.
+
+**Website URL:** [https://www.bookstackapp.com/](https://www.bookstackapp.com/)
+
+
+## B. Add your AI support agent to your *BookStack* application
+
+### In SiteSpeakAI
+
+Log into your SiteSpeakAI account and select your agent from the dropdown menu at the top, click on the **Install Agent** section in the sidebar, select the **Javascript** tab and then click on the **Copy Code** button to copy your agent code snippet.
+
+![uploads/help-center/images/puWzSBW5qAsJLOcdR4BPMA4pMEFZHgqFDf1BVk0p.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/puWzSBW5qAsJLOcdR4BPMA4pMEFZHgqFDf1BVk0p.png)
+
+### In BookStack
+
+1. Log into your **BookStack** account and select **Settings** on the top right menu
+
+![uploads/help-center/images/tlJ5LB9WAU1Cg8YeZ1eQ7cpjKzYOZNE4bJxmcHnf.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/tlJ5LB9WAU1Cg8YeZ1eQ7cpjKzYOZNE4bJxmcHnf.png)
+
+2. Select **Customization** on the left side menu
+
+![uploads/help-center/images/ZqrncpdEcKwS92K1NARDfHdbuerOCH6ZFsU2t9Ge.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/ZqrncpdEcKwS92K1NARDfHdbuerOCH6ZFsU2t9Ge.png)
+
+3. Scroll down on the list of Customizations, insert your snippet in the text box under **Custom HTML Head Content** and click on **Save Settings**
+
+![uploads/help-center/images/v1SBjrklxUu5vbIBP236G1fziZSoKPpIiz1FeKsL.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/v1SBjrklxUu5vbIBP236G1fziZSoKPpIiz1FeKsL.png)
+
+4. Your AI support agent button will now be displayed on your **BookStack** **BookStack** application under **Shelves** as well as **Books**
+
+![uploads/help-center/images/9shJbBl6uWXMqc6m5dgN5M52JMj7z0BaZVKY1I4W.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/9shJbBl6uWXMqc6m5dgN5M52JMj7z0BaZVKY1I4W.png)
+
+![uploads/help-center/images/SZTtcVXd2KcuRJZ5v5zcZOfYTbWlrh2zGql97Uh7.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/SZTtcVXd2KcuRJZ5v5zcZOfYTbWlrh2zGql97Uh7.png)
+
+5. If you click on the button it will display the AI support agent dialogue
+
+![uploads/help-center/images/7o51Bj7YW7Z4kfcyZBmbdQXKu4PYQi6OyeBvFr2F.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/7o51Bj7YW7Z4kfcyZBmbdQXKu4PYQi6OyeBvFr2F.png)
+
+Your AI support agent has now been added to your **BookStack** application and your visitors/customers can start interacting with it!
+
+<Cta />
+

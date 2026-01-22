@@ -1,0 +1,59 @@
+---
+title: "Install Your Chatbot"
+sidebarTitle: "Overview"
+description: "Deploy your SiteSpeakAI chatbot on any website or platform with our easy installation guides."
+icon: "download"
+---
+
+import Cta from '/snippets/cta.mdx';
+import { Card, CardGroup } from '@mintlify/components';
+
+SiteSpeakAI can be installed on virtually any website or platform. Choose your platform below to get step-by-step installation instructions.
+
+## Quick Install (Any Website)
+
+The fastest way to add your chatbot to any website is with our embed script. Simply add this code to your website's HTML:
+
+```html
+<script type="text/javascript">
+  (function(){
+    d=document;
+    s=d.createElement("script");
+    s.src="https://sitespeak.ai/chatbots/YOUR_CHATBOT_ID.js";
+    s.async=1;
+    d.getElementsByTagName("head")[0].appendChild(s);
+  })();
+</script>
+```
+
+Replace `YOUR_CHATBOT_ID` with your actual chatbot ID, which you can find in your [dashboard](https://sitespeak.ai/dashboard) under **Install Agent**.
+
+## Choose Your Platform
+
+<CardGroup cols={2}>
+  <Card title="Website Builders" icon="browser" href="/installing-your-chatbot/webflow">
+    Webflow, Framer, Wix, Squarespace, Carrd, Bubble, and more
+  </Card>
+  <Card title="E-commerce" icon="cart-shopping" href="/installing-your-chatbot/shopify">
+    Shopify, WooCommerce, BigCommerce, Magento, and more
+  </Card>
+  <Card title="CMS Platforms" icon="file-lines" href="/installing-your-chatbot/wordpress">
+    WordPress, Ghost, Joomla, Drupal, and more
+  </Card>
+  <Card title="Frameworks & Hosting" icon="code" href="/installing-your-chatbot/react">
+    React, Next.js, Vue, Angular, Vercel, Netlify, and more
+  </Card>
+  <Card title="Communication Tools" icon="comments" href="/installing-your-chatbot/slack">
+    Slack, Discord, Microsoft Teams, WhatsApp, and more
+  </Card>
+  <Card title="Custom HTML" icon="code" href="/installing-your-chatbot/html">
+    Any website with HTML access
+  </Card>
+</CardGroup>
+
+## Need Help?
+
+If you don't see your platform listed or need assistance with installation, [contact our support team](mailto:support@sitespeak.ai) and we'll help you get set up.
+
+<Cta />
+
