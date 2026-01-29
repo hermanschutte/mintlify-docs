@@ -1,16 +1,18 @@
 ---
 title: "How to add ChatGPT to Wix"
 sidebarTitle: "Wix"
-description: "How to add your custom ChatGPT trained chatbot to your Wix website."
+description: "Complete guide to installing an AI chatbot on your Wix website. Learn how to add custom code using Wix's Marketing Integration Tools."
 icon: "wix"
 ---
 
 import InstallCopyCode from '/snippets/install-copy-code.mdx';
 import Cta from '/snippets/cta.mdx';
 
-You want to embed your custom trained chatbot in your Wix website. Here's how to add ChatGPT to Wix with SiteSpeakAI.
+Adding a custom trained AI chatbot to your Wix website enables you to provide instant customer support, answer common questions, and capture leads around the clock.
 
-**Please note!** Adding your chatbot to your Wix website is achieved by adding the code snippet to you website code page, i.e. in the Head part of your webpage. This can only be done using one of the Premium subscription plans. Your WIX website must also be published and connected to a domain.
+<Warning>
+Adding custom code to your Wix website requires a **Premium plan**. Your site must also be published and connected to a domain for the chatbot to appear on your live site.
+</Warning>
 
 ## Add your chatbot to your Wix website
 
@@ -18,35 +20,66 @@ You want to embed your custom trained chatbot in your Wix website. Here's how to
 
 ### In Wix
 
-1. Add a new **Element**
+1. In the Wix Editor, click **Add Elements** (the plus icon)
 
 ![WIX - Add a new element_2.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/nxo7auOSY58Z59vt8mDOWjTUTIvep4njEKFOsyqc.png)
 
-2. Select the **Embed Code** element and then the **Custom Code** tool under **Marketing Integration Tools**
+2. Select **Embed Code**, then choose **Custom Code** under **Marketing Integration Tools**
 
 ![WIX - Add the Custom Code Element_2.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/YAkqGKAnFRMRkOLEP8xSiucDfWt1OKDeAjmTCvGt.png)
 
-3. Select `Add Code` in the Head part of the **Custom Code** dialogue
+3. Click **Add Code** in the **Head** section of the Custom Code dialog
 
 ![WIX - Custom Code Modal_2.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/w4c2btE8lfTGrE5HEn8wwVZ4Xs5domc3KIRkM56o.png)
 
-4. Paste your chatbot code snippet into the **Add Custom Code** modal (Add a name to make it easier to identify if you have more than one set of Custom Code added to you website). You can also select to display it on a specific page or on all pages
+4. Paste your chatbot code snippet into the **Add Custom Code** modal
+   - Give it a name like "SiteSpeakAI Chatbot" to identify it easily
+   - Choose whether to display on **All pages** or a specific page
 
-5. Click on **Apply** when done
+5. Click **Apply** to save your changes
 
 ![WIX - Custom Code Entry_2.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/stApQFONPnInXRvNAJ8EIK9yl8RQbPOcdnE0fGb4.png)
 
-8. Save your website changes and hit **Publish**. Note that Previewing your site will not display your chatbot
+6. Click **Publish** to make your changes live
 
 ![WIX - Publish Site_2.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/hP3GsrcTiUITJXCbkDvrmHH6nKaQ9J90BoFQojBL.png)
 
-9. The chatbot button will now be displayed on your Wwebsite
+<Note>
+The chatbot will only appear on your published site, not in the Wix Editor preview. You must publish your changes to see the chatbot.
+</Note>
+
+7. Your chatbot button will now appear on your live website
 
 ![Wix - Chatbot Button.PNG](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/b0YktZknskdUnqYtU226VLSccIrVSjAVTulY8JsB.png)
 
-10. Your customers can start interacting with it
+8. Visitors can click the button to open the chat and start asking questions
 
 ![Wix - Chatbot Dialogue.PNG](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/LQjOC826XYjlBjO9FJpKTugEHYXF5fOyZhogg6J8.png)
 
-<Cta />
+## Alternative: Using an HTML embed
 
+If you prefer to embed the chatbot in a specific location on your page rather than as a floating widget:
+
+1. In the Wix Editor, click **Add Elements** > **Embed Code** > **Embed HTML**
+2. Drag the HTML widget to where you want the chatbot to appear
+3. Click **Enter Code** and paste the iFrame embed code from SiteSpeakAI
+4. Resize the embed box as needed
+5. Publish your site
+
+This method is useful if you want the chatbot to appear inline within your page content rather than as a floating button.
+
+## Mobile responsiveness
+
+The SiteSpeakAI chatbot widget is fully responsive and works on all devices. On mobile, the chat button automatically adjusts its position to avoid interfering with navigation elements. You can customize the mobile position offset in your SiteSpeakAI dashboard if needed.
+
+## Troubleshooting
+
+**Chatbot not appearing after publishing?** Clear your browser cache and reload the page. Wix may cache your site for performance.
+
+**Custom Code option not available?** Make sure you have a Wix Premium plan. Custom code features are not available on free Wix sites.
+
+**Chatbot appears in wrong position?** Adjust the position and offset settings in your SiteSpeakAI appearance settings. You can position the widget in any corner and set custom margins.
+
+**Preview not showing the chatbot?** This is expected behavior. Wix's preview mode doesn't load custom code. You must publish your site to see the chatbot.
+
+<Cta />
