@@ -1,31 +1,60 @@
 ---
 title: "How to add ChatGPT to Notion"
 sidebarTitle: "Notion"
-description: "How to add your custom ChatGPT trained chatbot to your Notion website."
+description: "Learn how to embed a custom AI chatbot in Notion pages using iFrame embeds. Perfect for internal wikis, client portals, and knowledge bases."
 icon: "notebook"
 ---
 
 import Cta from '/snippets/cta.mdx';
 
-You want to embed your custom trained chatbot in your Notion website. Here's how to add ChatGPT to Notion with SiteSpeakAI.
+Adding a custom trained AI chatbot to your Notion workspace makes it easy to provide instant answers to your team or clients directly within your documentation and knowledge bases.
 
-With Notion, you will need to use the **iFrame** option to embed your chatbot.
+Notion supports embedding external content through iFrames, which means you can add your SiteSpeakAI chatbot to any Notion page. This works great for internal wikis, client portals, onboarding docs, and knowledge bases.
 
-## Add your chatbot to your Notion website
+<Note>
+Notion embeds display as inline content on your page rather than as a floating chat widget. The chatbot will appear wherever you place the embed block.
+</Note>
+
+## Add your chatbot to Notion
 
 ### In SiteSpeakAI
 
-Select your chatbot from the dropdown menu at the top, click on the **Install Chatbot** section in the sidebar, then click on the **iFrame** tab and then on the **Copy Code** button to copy your **iFrame** code snippet.
- 
+1. Select your chatbot from the dropdown menu at the top of the dashboard
+2. Click on the **Install Chatbot** section in the sidebar
+3. Click on the **iFrame** tab
+4. Click the **Copy Code** button to copy your iFrame code snippet
+
 ![copy-code-snippet.png](https://nyc3.digitaloceanspaces.com/cdn.sitespeak.ai/uploads/help-center/images/bjMJzOTDAEBcxF1yBZ6VpIpWfwY1wMDWSRBZR8jv.png)
- 
+
 ### In Notion
 
-1. Go to the Notion page where you would like to add your chatbot.
+1. Go to the Notion page where you would like to add your chatbot
+2. Type **/embed** and press Enter to add an embed block
+3. In the modal that appears, paste the **iFrame** code snippet you copied from SiteSpeakAI
+4. Click **Embed link** to add the chatbot to your page
 
-2. Type **/embed**
+Your chatbot will now appear embedded in your Notion page, ready to answer questions from anyone who has access to that page.
 
-3. In the modal, paste the **iFrame** code snippet that you just copied.
+## Use cases for Notion chatbots
+
+**Internal knowledge base**: Add a chatbot trained on your company policies, procedures, and FAQs to help employees find answers quickly.
+
+**Client portals**: Embed a chatbot in shared Notion pages to provide 24/7 support to your clients without them needing to contact you directly.
+
+**Onboarding documentation**: Help new team members get up to speed faster by adding a chatbot that can answer questions about your processes and tools.
+
+**Product documentation**: Make your product docs more interactive by letting users ask questions and get instant answers.
+
+## Customizing the embed size
+
+You can adjust the size of your chatbot embed by modifying the width and height values in the iFrame code before pasting it into Notion. The default size works well for most pages, but you may want to make it larger for a more prominent chat experience.
+
+## Troubleshooting
+
+**Chatbot not displaying?** Make sure you're using the iFrame code (not the standard JavaScript widget code). Notion only supports iFrame embeds.
+
+**Embed appears too small?** You can adjust the width and height parameters in the iFrame code before embedding, or resize the block directly in Notion.
+
+**Changes not showing?** Try refreshing the Notion page or clearing your browser cache. Notion may cache embedded content.
 
 <Cta />
-
