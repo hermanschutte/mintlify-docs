@@ -1,0 +1,150 @@
+---
+title: "Connect SiteSpeakAI to WhatsApp Business"
+sidebarTitle: "WhatsApp"
+description: "Enable your AI chatbot to respond to WhatsApp messages using the WhatsApp Business API."
+icon: "whatsapp"
+---
+
+import Cta from '/snippets/cta.mdx';
+import { Steps, Step, Frame, Note, Warning } from '@mintlify/components';
+
+SiteSpeakAI integrates with WhatsApp Business to let your AI chatbot respond to customer messages on WhatsApp. This guide walks you through setting up the WhatsApp Business API and connecting it to your SiteSpeakAI chatbot.
+
+<Note>
+WhatsApp integration is available on **Pro Plus** and **Business** plans.
+</Note>
+
+## Prerequisites
+
+Before you begin, you'll need:
+
+- A **Meta Business account** (free to create)
+- A **phone number** that can receive SMS or voice calls for verification
+- A **SiteSpeakAI Pro Plus or Business plan**
+
+<Warning>
+The phone number you use for WhatsApp Business cannot be the same as an existing personal WhatsApp account. You'll need a dedicated business number or a new number.
+</Warning>
+
+## Set Up Meta Developer App
+
+<Steps>
+  <Step title="Create a Meta Developer account">
+    Go to [developers.facebook.com](https://developers.facebook.com) and log in with your Facebook account. If you don't have a developer account, you'll be prompted to create one.
+  </Step>
+  <Step title="Create a new app">
+    Click **My Apps** in the top right, then **Create App**. Select **Business** as the app type, give it a name (e.g., "My Business WhatsApp Bot"), and click **Create App**.
+  </Step>
+  <Step title="Add WhatsApp product">
+    In your app dashboard, scroll down to **Add products to your app** and click **Set up** on the **WhatsApp** card.
+  </Step>
+  <Step title="Select or create a Meta Business Account">
+    You'll be prompted to select an existing Meta Business Account or create a new one. This is required to use the WhatsApp Business API.
+  </Step>
+  <Step title="Add a phone number">
+    In the WhatsApp section of your app, go to **API Setup**. Click **Add phone number** and follow the verification process. You'll receive a code via SMS or voice call.
+  </Step>
+</Steps>
+
+## Get Your API Credentials
+
+Once your phone number is verified, you'll need three pieces of information from the Meta Developer dashboard:
+
+<Steps>
+  <Step title="Get your Phone Number ID">
+    In **WhatsApp > API Setup**, find your verified phone number. The **Phone Number ID** is displayed below the number (a long numeric string like `123456789012345`).
+  </Step>
+  <Step title="Generate a Permanent Access Token">
+    By default, Meta provides a temporary access token that expires in 24 hours. For production use, you need a permanent token:
+
+    1. Go to **Business Settings** at [business.facebook.com/settings](https://business.facebook.com/settings)
+    2. Navigate to **Users > System Users**
+    3. Click **Add** to create a new system user (if you don't have one)
+    4. Give it a name like "WhatsApp API" and select **Admin** role
+    5. Click **Add Assets**, select your WhatsApp app, and enable **Full control**
+    6. Click **Generate new token**, select your app, and check `whatsapp_business_messaging` and `whatsapp_business_management`
+    7. Copy the generated token - this is your permanent access token
+  </Step>
+  <Step title="Get your App Secret">
+    Go back to your app in the [Meta Developer Dashboard](https://developers.facebook.com). Navigate to **App settings > Basic**. Click **Show** next to the **App Secret** field and copy it.
+  </Step>
+</Steps>
+
+## Connect to SiteSpeakAI
+
+<Steps>
+  <Step title="Go to Deploy & Install">
+    In your SiteSpeakAI dashboard, select your chatbot and go to **Deploy & Install**.
+  </Step>
+  <Step title="Select WhatsApp">
+    Click on the **WhatsApp** tab.
+  </Step>
+  <Step title="Enter your credentials">
+    Fill in the three fields:
+    - **Phone Number ID** - The numeric ID from Meta's API Setup page
+    - **Access Token** - Your permanent access token from the system user
+    - **App Secret** - Your app secret from App Settings > Basic
+  </Step>
+  <Step title="Click Connect">
+    Click the **Connect** button. SiteSpeakAI will generate a **Webhook URL** and **Verify Token** for you.
+  </Step>
+</Steps>
+
+## Configure the Webhook in Meta
+
+After connecting in SiteSpeakAI, you need to configure the webhook in your Meta Developer App:
+
+<Steps>
+  <Step title="Go to WhatsApp Configuration">
+    In your Meta Developer App, navigate to **WhatsApp > Configuration**.
+  </Step>
+  <Step title="Edit the webhook">
+    Click **Edit** next to the Webhook URL field.
+  </Step>
+  <Step title="Enter the webhook details">
+    - **Callback URL**: Paste the Webhook URL from SiteSpeakAI
+    - **Verify token**: Paste the Verify Token from SiteSpeakAI
+
+    Click **Verify and save**.
+  </Step>
+  <Step title="Subscribe to messages">
+    Under **Webhook fields**, find the `messages` field and click **Subscribe**.
+  </Step>
+</Steps>
+
+## Test Your Integration
+
+Send a message to your WhatsApp Business number from any WhatsApp account. Your SiteSpeakAI chatbot should respond automatically.
+
+<Note>
+During development, you can only send messages to phone numbers that have been added as test numbers in your Meta app. To message any WhatsApp user, you'll need to complete Meta's business verification process.
+</Note>
+
+## Troubleshooting
+
+### Messages not being received
+- Verify that the webhook URL is correctly configured in Meta
+- Check that you've subscribed to the `messages` webhook field
+- Ensure your access token hasn't expired (use a permanent system user token)
+
+### Messages not being sent
+- Check that your access token has the `whatsapp_business_messaging` permission
+- Verify the phone number ID is correct
+- Check the SiteSpeakAI conversation logs for any error messages
+
+### Webhook verification failing
+- Make sure the Verify Token in Meta matches exactly what SiteSpeakAI generated
+- Ensure there are no extra spaces before or after the values
+- Try disconnecting and reconnecting in SiteSpeakAI to generate new credentials
+
+## Going Live
+
+To send messages to any WhatsApp user (not just test numbers), you'll need to:
+
+1. **Complete Business Verification** - Verify your business in Meta Business Settings
+2. **Request Production Access** - In your app's WhatsApp settings, request to go live
+3. **Add a Payment Method** - WhatsApp Business API charges per conversation (first 1,000 conversations per month are free)
+
+For detailed information, see [Meta's WhatsApp Business documentation](https://developers.facebook.com/docs/whatsapp/cloud-api/get-started).
+
+<Cta />

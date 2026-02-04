@@ -203,6 +203,7 @@
             "pages": [
               "integrations/overview",
               "integrations/hubspot",
+              "integrations/whatsapp",
               "integrations/zapier"
             ]
           },
