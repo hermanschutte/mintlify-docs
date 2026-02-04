@@ -33,16 +33,31 @@ The phone number you use for WhatsApp Business cannot be the same as an existing
     Go to [developers.facebook.com](https://developers.facebook.com) and log in with your Facebook account. If you don't have a developer account, you'll be prompted to create one.
   </Step>
   <Step title="Create a new app">
-    Click **My Apps** in the top right, then **Create App**. Select **Business** as the app type, give it a name (e.g., "My Business WhatsApp Bot"), and click **Create App**.
+    Click **My Apps** in the top right, then **Create App**. Give it a name (e.g., "My Business WhatsApp Bot"), and click **Next**. Under **Add Use Cases** filter by **Others**, then select **Other**. Click **Next**.
+    <Frame>
+      <img src="/images/integrations/whatsapp-create-app.png" alt="HubSpot integration card" />
+    </Frame>
+  </Step>
+  <Step title="Select an app type">
+    Select the **Business** app type and click **Next**. Then select **Create App** on the next screen.
+    <Frame>
+      <img src="/images/integrations/whatsapp-app-type.png" alt="HubSpot integration card" />
+    </Frame>
   </Step>
   <Step title="Add WhatsApp product">
-    In your app dashboard, scroll down to **Add products to your app** and click **Set up** on the **WhatsApp** card.
+    In your app dashboard, scroll down to **Add products** and click **Set up** on the **WhatsApp** card.
+    <Frame>
+      <img src="/images/integrations/whatsapp-add-product.png" alt="HubSpot integration card" />
+    </Frame>
   </Step>
   <Step title="Select or create a Meta Business Account">
     You'll be prompted to select an existing Meta Business Account or create a new one. This is required to use the WhatsApp Business API.
   </Step>
   <Step title="Add a phone number">
     In the WhatsApp section of your app, go to **API Setup**. Click **Add phone number** and follow the verification process. You'll receive a code via SMS or voice call.
+    <Frame>
+      <img src="/images/integrations/whatsapp-add-phone-number.png" alt="HubSpot integration card" />
+    </Frame>
   </Step>
 </Steps>
 
@@ -84,6 +99,9 @@ Once your phone number is verified, you'll need three pieces of information from
     - **Phone Number ID** - The numeric ID from Meta's API Setup page
     - **Access Token** - Your permanent access token from the system user
     - **App Secret** - Your app secret from App Settings > Basic
+    <Frame>
+      <img src="/images/integrations/whatsapp-webhook.png" alt="HubSpot integration card" />
+    </Frame>
   </Step>
   <Step title="Click Connect">
     Click the **Connect** button. SiteSpeakAI will generate a **Webhook URL** and **Verify Token** for you.
@@ -98,17 +116,22 @@ After connecting in SiteSpeakAI, you need to configure the webhook in your Meta 
   <Step title="Go to WhatsApp Configuration">
     In your Meta Developer App, navigate to **WhatsApp > Configuration**.
   </Step>
-  <Step title="Edit the webhook">
-    Click **Edit** next to the Webhook URL field.
-  </Step>
   <Step title="Enter the webhook details">
     - **Callback URL**: Paste the Webhook URL from SiteSpeakAI
     - **Verify token**: Paste the Verify Token from SiteSpeakAI
 
     Click **Verify and save**.
+
+    <Frame>
+      <img src="/images/integrations/whatsapp-callback-url.png" alt="HubSpot integration card" />
+    </Frame>
   </Step>
   <Step title="Subscribe to messages">
-    Under **Webhook fields**, find the `messages` field and click **Subscribe**.
+    Navigate back to **WhatsApp > Configuration**. Under **Webhook fields**, find the `messages` field and click **Subscribe**.
+    
+    <Frame>
+      <img src="/images/integrations/whatsapp-messages.png" alt="HubSpot integration card" />
+    </Frame>
   </Step>
 </Steps>
 
