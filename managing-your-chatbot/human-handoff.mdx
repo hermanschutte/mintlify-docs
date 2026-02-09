@@ -73,6 +73,70 @@ Receive escalation notifications directly in your Slack workspace:
   You must connect Slack in Deploy & Install before the Slack notification option becomes available.
 </Note>
 
+## Webhook notifications
+
+Send escalation data to any URL via a POST request. This is useful for integrating with tools like Zapier, Make, or your own CRM.
+
+<Steps>
+  <Step title="Enable webhook notifications">
+    In **Settings → Escalations**, toggle on **Enable Webhook Notifications**.
+  </Step>
+  <Step title="Enter your webhook URL">
+    Paste the URL where you want to receive escalation data.
+  </Step>
+  <Step title="Add a signing secret (optional)">
+    Enter a secret to sign webhook payloads with HMAC-SHA256 for verification. The signature is sent in the `X-Signature-256` header.
+  </Step>
+</Steps>
+
+### Webhook payload
+
+When a visitor escalates, SiteSpeakAI sends a POST request with a JSON body:
+
+```json
+{
+  "event": "escalation.created",
+  "chatbot": {
+    "id": "chatbot-uuid",
+    "name": "My Chatbot"
+  },
+  "visitor": {
+    "id": 123,
+    "email": "visitor@example.com",
+    "first_name": "Jane",
+    "last_name": "Doe",
+    "phone": "+1234567890"
+  },
+  "conversation": {
+    "id": 456,
+    "last_message": "I need to speak with someone"
+  },
+  "inbox_url": "https://app.sitespeak.ai/chatbots/{id}/inbox/{visitor_id}",
+  "timestamp": "2026-02-09T12:00:00+00:00"
+}
+```
+
+### Verifying webhook signatures
+
+If you set a signing secret, each request includes an `X-Signature-256` header. To verify the request is from SiteSpeakAI, compute the HMAC-SHA256 of the raw request body using your secret and compare it to the header value:
+
+```js
+const crypto = require("crypto")
+
+function verifySignature(payload, secret, signature) {
+  const expected =
+    "sha256=" + crypto.createHmac("sha256", secret).update(payload).digest("hex")
+  return crypto.timingSafeEqual(
+    Buffer.from(expected),
+    Buffer.from(signature)
+  )
+}
+```
+
+<Tip>
+  Webhook notifications work independently of email and Slack notifications. You can enable any combination of the three.
+</Tip>
+
 ## How visitors escalate
 
 Once enabled, visitors can escalate to human support by:
@@ -122,6 +186,7 @@ You can customize the messages shown to visitors during escalation in the **Loca
 - **Set expectations**: Let visitors know typical response times in your escalation confirmation message
 - **Use round robin**: Distribute escalations evenly across your team
 - **Connect Slack**: Get real-time notifications where your team already communicates
+- **Use webhooks**: Connect escalations to your CRM or ticketing system via Zapier, Make, or a custom endpoint
 - **Review escalations**: Regularly review why visitors escalate to improve your AI's training
 
 <Cta />
