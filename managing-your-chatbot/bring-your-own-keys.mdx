@@ -1,0 +1,131 @@
+---
+title: "Bring Your Own Keys (BYOK)"
+sidebarTitle: "Bring Your Own Keys"
+description: "Use your own OpenAI or Anthropic API keys with SiteSpeakAI for unlimited messages without credit charges."
+icon: "key"
+---
+
+import Cta from '/snippets/cta.mdx';
+
+Bring Your Own Keys (BYOK) lets you connect your own OpenAI or Anthropic API keys to SiteSpeakAI. When your own keys are used, messages don't count against your monthly credit allowance, giving you effectively unlimited messages.
+
+<Note>
+  BYOK is available on Pro Plus and Business plans.
+</Note>
+
+## How it works
+
+SiteSpeakAI supports two levels of API keys:
+
+- **Account-level keys** apply to all your chatbots by default
+- **Chatbot-level keys** override your account keys for a specific chatbot
+
+The priority order is: **Chatbot key > Account key > Platform key**. If no custom key is found for the model's provider, SiteSpeakAI falls back to platform keys and messages count against your credits as usual.
+
+### Supported providers
+
+| Provider | Models | Key format |
+|----------|--------|------------|
+| **OpenAI** | GPT-4.1, GPT-4.1 Mini, GPT-5, o3, etc. | `sk-...` |
+| **Anthropic** | Claude Sonnet 4.5, Claude Haiku, etc. | `sk-ant-...` |
+
+## Adding account-level keys
+
+Account-level keys apply to all chatbots on your account. This is the recommended approach if you want all your agents to use your own keys.
+
+<Steps>
+  <Step title="Navigate to LLM API Keys">
+    Go to your profile settings by clicking your avatar in the top right, then select **LLM API Keys** from the sidebar.
+  </Step>
+  <Step title="Click Add Key">
+    Under the provider you want to configure (OpenAI or Anthropic), click **Add Key**.
+  </Step>
+  <Step title="Enter your API key">
+    Paste your API key into the input field. You can toggle visibility using the eye icon.
+
+    <Frame>
+      <img src="/images/managing-your-chatbot/byok-account-add-key.png" alt="Adding an account-level API key" />
+    </Frame>
+  </Step>
+  <Step title="Save and validate">
+    Click **Save Key**. SiteSpeakAI will validate your key by making a test request to the provider. If the key is valid, it will be saved. If validation fails, you'll see an error message and can try again with a different key.
+  </Step>
+</Steps>
+
+## Adding chatbot-level keys
+
+Chatbot-level keys override your account keys for a specific chatbot. Use this if you want different keys for different agents, or if you only want to use your own keys for certain chatbots.
+
+<Steps>
+  <Step title="Go to chatbot settings">
+    Navigate to **Configuration > Settings** for the chatbot you want to configure.
+  </Step>
+  <Step title="Open the AI Model tab">
+    Click the **AI Model** tab and scroll down to the **Custom API Keys (BYOK)** section.
+
+    <Frame>
+      <img src="/images/managing-your-chatbot/byok-chatbot-settings.png" alt="BYOK section in chatbot settings" />
+    </Frame>
+  </Step>
+  <Step title="Add your key">
+    Click **Add Key** under the provider you want to configure, paste your API key, and click **Save**. The key will be validated before it is saved.
+  </Step>
+</Steps>
+
+## Updating or removing keys
+
+To **update** an existing key, click the **Update** button next to the masked key, enter the new key, and save. The new key will be validated before replacing the old one.
+
+To **remove** a key, click the trash icon and confirm the deletion. Your chatbot will fall back to the next available key in the priority chain (chatbot > account > platform).
+
+## Security
+
+We take the security of your API keys seriously. Here is how your keys are protected:
+
+### Encryption at rest
+
+All API keys are encrypted using **AES-256-CBC** encryption before being stored in our database. This is the same encryption standard used by banks and government agencies. Your raw API key is never stored in plain text. It is encrypted immediately upon receipt and only decrypted when needed to make a request to the LLM provider on your behalf.
+
+### Direct provider communication
+
+When your own keys are used, requests are sent **directly to the LLM provider** (OpenAI or Anthropic). Your keys are never routed through third-party monitoring or logging services.
+
+### Secure transmission
+
+All API key transmission between your browser and our servers, and between our servers and LLM providers, is encrypted using **TLS/HTTPS**. Keys are never transmitted in plain text.
+
+## Billing and credits
+
+When a message is processed using your own API key:
+
+- **No credits are deducted** from your monthly allowance
+- You are billed directly by the LLM provider (OpenAI or Anthropic) based on their pricing
+
+When your own key is not available for the model being used (for example, you have an OpenAI key but your chatbot uses a Claude model), messages will use platform keys and count against your credits as normal.
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Which plans support BYOK?">
+    BYOK is available on Pro Plus and Business plans.
+  </Accordion>
+
+  <Accordion title="Do I need keys for both providers?">
+    No. You only need a key for the provider your chatbot's model uses. If your chatbot uses a GPT model, you only need an OpenAI key. If it uses a Claude model, you only need an Anthropic key.
+  </Accordion>
+
+  <Accordion title="What happens if my key becomes invalid?">
+    If your key is rejected by the provider (e.g., revoked or expired), SiteSpeakAI will automatically fall back to platform keys. Messages will count against your credits until you update your key.
+  </Accordion>
+
+  <Accordion title="Can I use different keys for different chatbots?">
+    Yes. Add chatbot-level keys in each chatbot's settings to override your account-level keys. This is useful if you have separate billing accounts or want to track usage per chatbot.
+  </Accordion>
+
+  <Accordion title="Where do I get an API key?">
+    - **OpenAI**: Create a key at [platform.openai.com/api-keys](https://platform.openai.com/api-keys)
+    - **Anthropic**: Create a key at [console.anthropic.com/settings/keys](https://console.anthropic.com/settings/keys)
+  </Accordion>
+</AccordionGroup>
+
+<Cta />
