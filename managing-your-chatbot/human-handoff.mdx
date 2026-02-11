@@ -96,6 +96,8 @@ When a visitor escalates, SiteSpeakAI sends a POST request with a JSON body:
 ```json
 {
   "event": "escalation.created",
+  "title": "My Chatbot: Visitor needs human assistance",
+  "text": "I need to speak with someone",
   "chatbot": {
     "id": "chatbot-uuid",
     "name": "My Chatbot"
