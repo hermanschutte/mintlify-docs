@@ -1,0 +1,235 @@
+---
+title: "Expose Your Knowledge Base via MCP"
+sidebarTitle: "MCP Endpoint"
+description: "Let AI agents like Claude, Cursor, and Windsurf query your chatbot's knowledge base directly using the Model Context Protocol."
+icon: "server"
+---
+
+import Cta from '/snippets/cta.mdx';
+import { Steps, Step, Frame, Note, Warning, Tip } from '@mintlify/components';
+
+Every SiteSpeakAI chatbot can act as an MCP (Model Context Protocol) server, giving AI agents direct access to your knowledge base. Instead of scraping your website or chat widget, agents connect to a structured endpoint and get accurate, sourced answers from your trained content.
+
+This means your business knowledge becomes accessible to the growing ecosystem of MCP-compatible AI tools - from coding assistants like Cursor and Windsurf to personal AI agents and custom automations.
+
+<Note>
+MCP Server is available on **Pro**, **Pro Plus**, and **Business** plans. Each plan includes a monthly query allowance (Pro: 1,000 / Pro Plus: 2,500 / Business: 10,000).
+</Note>
+
+## Why expose your knowledge base via MCP?
+
+AI agents are becoming the primary way people find and interact with information. When a developer asks Cursor about your API, or a user asks Claude about your product, those agents need a reliable source of truth. Your MCP server provides that.
+
+- **Reach AI agents directly.** Your knowledge base becomes a tool that any MCP-compatible agent can call, not just visitors to your website.
+- **Accurate, sourced answers.** Agents get results from your trained content with source URLs - no hallucinations from outdated web scrapes.
+- **Full RAG pipeline.** Every query runs through semantic search, query expansion, and reranking for high-quality results.
+- **Control access.** Choose between authenticated access with API tokens or public access for broader reach.
+- **Track usage.** Monitor MCP query usage alongside your other metrics in the dashboard.
+
+## How it works
+
+When an AI agent connects to your MCP server endpoint, it gets access to one tool:
+
+**`query_knowledge_base`** - Searches your chatbot's trained content using the full RAG pipeline (vector search, query expansion, and Cohere reranking). Returns relevant content chunks with source URLs.
+
+The agent sends a natural language query, and your MCP server returns the most relevant content from your training sources - the same content your chatbot uses to answer questions.
+
+## Enable MCP Server
+
+<Steps>
+  <Step title="Go to Settings">
+    In your chatbot dashboard, select your chatbot and go to **Settings**.
+  </Step>
+  <Step title="Open Advanced settings">
+    Click the **Advanced** tab.
+  </Step>
+  <Step title="Find MCP Server">
+    Scroll down to the **MCP Server (Public Access)** section.
+  </Step>
+  <Step title="Enable public access (optional)">
+    Toggle **Public MCP Access** to allow AI agents to query your knowledge base without authentication.
+
+    When disabled, agents need a valid API token to connect (see [Authentication](#authentication) below).
+  </Step>
+  <Step title="Copy your endpoint URL">
+    Click the copy button next to your **MCP Endpoint** URL. This is the URL AI agents will use to connect.
+
+    Your endpoint URL follows this format:
+
+    ```
+    https://chatbot.sitespeak.ai/api/{chatbotId}/server/mcp
+    ```
+  </Step>
+  <Step title="Save settings">
+    Click **Save** to apply your changes.
+  </Step>
+</Steps>
+
+## Authentication
+
+Your MCP server supports two access modes:
+
+### Public access (no authentication)
+
+When **Public MCP Access** is enabled, any AI agent can query your knowledge base without a token. This is the simplest option and works well when you want maximum reach - for example, letting anyone's Claude or Cursor instance access your documentation.
+
+### Authenticated access (API token)
+
+When Public MCP Access is disabled, agents must include a valid API token in the `Authorization` header:
+
+```
+Authorization: Bearer YOUR_API_TOKEN
+```
+
+Generate an API token from your [Account page](https://sitespeak.ai/user/api-tokens). This is the same token used for the [SiteSpeakAI REST API](/api-reference/introduction).
+
+<Tip>
+Use authenticated access when your knowledge base contains internal or sensitive information. Use public access when you want to maximize the reach of your documentation or support content.
+</Tip>
+
+## Connect AI tools to your MCP server
+
+### Claude Desktop
+
+Add your MCP server to Claude Desktop's configuration file:
+
+<Tabs>
+<Tab title="macOS">
+Edit `~/Library/Application Support/Claude/claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "my-knowledge-base": {
+      "type": "url",
+      "url": "https://chatbot.sitespeak.ai/api/{chatbotId}/server/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_API_TOKEN"
+      }
+    }
+  }
+}
+```
+</Tab>
+<Tab title="Windows">
+Edit `%APPDATA%\Claude\claude_desktop_config.json`:
+
+```json
+{
+  "mcpServers": {
+    "my-knowledge-base": {
+      "type": "url",
+      "url": "https://chatbot.sitespeak.ai/api/{chatbotId}/server/mcp",
+      "headers": {
+        "Authorization": "Bearer YOUR_API_TOKEN"
+      }
+    }
+  }
+}
+```
+</Tab>
+</Tabs>
+
+Restart Claude Desktop. You should see your knowledge base listed as an available tool.
+
+<Note>
+If you enabled **Public MCP Access**, you can omit the `headers` field entirely.
+</Note>
+
+### Cursor
+
+Add your MCP server in Cursor's settings:
+
+1. Open **Cursor Settings** (Cmd+Shift+J on macOS, Ctrl+Shift+J on Windows)
+2. Go to **MCP**
+3. Click **+ Add new MCP server**
+4. Enter the following:
+   - **Name:** Your knowledge base name
+   - **Type:** `sse`
+   - **URL:** `https://chatbot.sitespeak.ai/api/{chatbotId}/server/mcp`
+
+If using authenticated access, add the Authorization header in the server configuration.
+
+### Windsurf
+
+Add your MCP server in Windsurf's MCP configuration:
+
+1. Open the **Command Palette** (Cmd+Shift+P on macOS, Ctrl+Shift+P on Windows)
+2. Search for **MCP: Configure MCP Servers**
+3. Add your server:
+
+```json
+{
+  "mcpServers": {
+    "my-knowledge-base": {
+      "serverUrl": "https://chatbot.sitespeak.ai/api/{chatbotId}/server/mcp"
+    }
+  }
+}
+```
+
+### Custom MCP clients
+
+Any MCP-compatible client can connect using the Streamable HTTP transport:
+
+- **Endpoint:** `https://chatbot.sitespeak.ai/api/{chatbotId}/server/mcp`
+- **Transport:** Streamable HTTP (POST for requests, GET for SSE streaming)
+- **Authentication:** Bearer token in the `Authorization` header (when public access is disabled)
+
+## Rate limits and query credits
+
+MCP server requests are rate-limited to **30 requests per minute** per IP address. This is separate from your chat widget rate limits.
+
+Each query to `query_knowledge_base` uses one query credit from your monthly allowance:
+
+| Plan | Monthly MCP queries |
+|------|-------------------|
+| Pro | 1,000 |
+| Pro Plus | 2,500 |
+| Business | 10,000 |
+
+Track your usage on the [Usage page](https://sitespeak.ai/user/usage) in your account settings.
+
+When your monthly limit is reached, the server returns a `429` status code. Credits reset at the start of each billing cycle.
+
+## Use cases
+
+### Documentation search for developers
+
+Expose your product documentation so developers using Cursor, Windsurf, or Claude can look up your APIs, configuration options, and guides without leaving their editor.
+
+### Internal knowledge base
+
+Connect your company's trained chatbot to your team's AI tools. Sales teams can query product specs from Claude, support teams can look up troubleshooting guides, and engineers can search internal docs - all through the tools they already use.
+
+### Customer-facing AI access
+
+Enable public access so your customers' AI agents can query your knowledge base directly. When someone asks Claude or ChatGPT about your product, their agent can pull accurate answers from your trained content instead of relying on potentially outdated web data.
+
+## Troubleshooting
+
+### Agent can't connect
+
+- Verify the endpoint URL is correct and includes your chatbot ID
+- Check that your plan supports MCP Server (Pro or higher)
+- If using authenticated access, confirm your API token is valid
+
+### Getting 401 Unauthorized
+
+- Ensure the `Authorization` header uses the format `Bearer YOUR_API_TOKEN`
+- Generate a new token from your [Account page](https://sitespeak.ai/user/api-tokens) if the current one may have been revoked
+- If you want to skip authentication, enable **Public MCP Access** in your chatbot settings
+
+### Getting 429 Too Many Requests
+
+- You've hit either the per-minute rate limit (30/min) or your monthly query credit limit
+- Check your usage on the [Usage page](https://sitespeak.ai/user/usage)
+- Consider upgrading your plan for a higher monthly allowance
+
+### Results seem incomplete or irrelevant
+
+- Make sure your chatbot has been trained with relevant content
+- Check that your training sources are up to date (use auto-sync if available on your plan)
+- Try rephrasing the query - the search uses semantic matching, so natural language questions work best
+
+<Cta />
